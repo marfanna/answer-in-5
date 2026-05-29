@@ -62,6 +62,7 @@ export const SUB_CATEGORIES: SubCategory[] = [
   { id: 'subcat_ariana',  categoryId: 'cat_music', name: 'Ariana Grande',    slug: 'ariana-grande',    icon: 'music', description: 'Thank u, next — if you fail this.'           },
   { id: 'subcat_onedirection', categoryId: 'cat_music', name: 'One Direction', slug: 'one-direction', icon: 'music', description: 'Test your knowledge on the ultimate boyband.' },
   { id: 'subcat_sabrina', categoryId: 'cat_music', name: 'Sabrina Carpenter', slug: 'sabrina-carpenter', icon: 'music', description: 'Short n\' sweet — but this quiz isn\'t.'      },
+  { id: 'subcat_justinbieber', categoryId: 'cat_music', name: 'Justin Bieber', slug: 'justin-bieber', icon: 'music', description: 'Are you the ultimate Belieber?' },
 ];
 
 import { BTS_QUESTIONS }          from './btsQuestions';
@@ -70,6 +71,7 @@ import { BEYONCE_QUESTIONS }      from './beyonceQuestions';
 import { ARIANA_QUESTIONS }       from './arianaQuestions';
 import { ONE_DIRECTION_QUESTIONS } from './oneDirectionQuestions';
 import { SABRINA_QUESTIONS }       from './sabrinacarpenter';
+import { JUSTIN_BIEBER_QUESTIONS } from './justinbieber';
 
 const mappedTsQuestions: Question[] = TAYLOR_SWIFT_QUESTIONS.map((q, index) => ({
   ...q, id: `q_ts_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_tswift'
@@ -95,6 +97,10 @@ const mappedSabrinaQuestions: Question[] = SABRINA_QUESTIONS.map((q, index) => (
   ...q, id: `q_sab_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_sabrina'
 }));
 
+const mappedJustinBieberQuestions: Question[] = JUSTIN_BIEBER_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_jb_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_justinbieber'
+}));
+
 export const QUESTIONS: Question[] = [
   ...mappedTsQuestions,
   ...mappedBtsQuestions,
@@ -102,4 +108,5 @@ export const QUESTIONS: Question[] = [
   ...mappedArianaQuestions,
   ...mappedOneDirectionQuestions,
   ...mappedSabrinaQuestions,
+  ...mappedJustinBieberQuestions,
 ];
