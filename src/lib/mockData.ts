@@ -32,6 +32,7 @@ export type SubCategory = {
   name: string;
   slug: string;
   icon: NicheIcon;
+  description: string;
 };
 
 export const CATEGORIES: Category[] = [
@@ -50,9 +51,10 @@ export const CATEGORIES: Category[] = [
 // slug    → used in the URL: /quiz/[slug]
 // ─────────────────────────────────────────────────────────────────────────────
 export const SUB_CATEGORIES: SubCategory[] = [
-  { id: 'subcat_tswift',  categoryId: 'cat_music',   name: 'Taylor Swift', slug: 'taylor-swift', icon: 'music'   },
-  { id: 'subcat_bts',     categoryId: 'cat_music',   name: 'BTS',          slug: 'bts',          icon: 'music'   },
-  { id: 'subcat_beyonce', categoryId: 'cat_music',   name: 'Beyoncé',      slug: 'beyonce',      icon: 'music'   },
+  { id: 'subcat_tswift',  categoryId: 'cat_music', name: 'Taylor Swift', slug: 'taylor-swift', icon: 'music',   description: 'Are you the ultimate Swiftie?'         },
+  { id: 'subcat_bts',     categoryId: 'cat_music', name: 'BTS',          slug: 'bts',          icon: 'music',   description: 'Test your ARMY knowledge.'              },
+  { id: 'subcat_beyonce', categoryId: 'cat_music', name: 'Beyoncé',      slug: 'beyonce',      icon: 'music',   description: 'How well do you know Queen Bey?'        },
+  { id: 'cat_mixed',      categoryId: 'cat_mixed', name: 'Ultimate Mix', slug: 'mixed',        icon: 'general', description: 'Every niche. One massive challenge.'     },
 ];
 
 import { BTS_QUESTIONS }          from './btsQuestions';
