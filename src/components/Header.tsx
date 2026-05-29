@@ -56,7 +56,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden sm:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6">
           <Link href="/leaderboard" className={navLinkClass('/leaderboard')}>Leaderboard</Link>
 
           {!isLoading && (
@@ -95,7 +95,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden p-2 rounded-xl text-slate-500 hover:bg-slate-100 transition-colors"
+          className="md:hidden p-2 rounded-xl text-slate-500 hover:bg-slate-100 transition-colors"
           onClick={() => setMenuOpen(v => !v)}
           aria-label="Toggle menu"
         >
@@ -105,7 +105,7 @@ export default function Header() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="sm:hidden border-t border-slate-100 bg-white px-4 py-3 space-y-1">
+        <div className="md:hidden border-t border-slate-100 bg-white px-4 py-3 space-y-1">
           <Link
             href="/leaderboard"
             className={`block px-3 py-2.5 rounded-xl text-sm font-bold transition-colors ${pathname === '/leaderboard' ? 'bg-slate-100 text-slate-900' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}
