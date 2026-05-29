@@ -1,6 +1,7 @@
 import { Question } from './mockData';
 
 export const SABRINA_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'>[] = [
+  // --- Existing Questions (105) ---
   { questionText: "In what year was Sabrina Carpenter's debut EP 'Can't Blame a Girl for Trying' released?", options: ["2013", "2014", "2015"], correctAnswerIndex: 1, explanation: "The EP was released on April 8, 2014.", timeLimitSeconds: 5 },
   { questionText: "Which album contains the song 'On Purpose'?", options: ["EVOLution", "Eyes Wide Open", "Singular: Act I"], correctAnswerIndex: 0, explanation: "On Purpose is track 5 on Sabrina's second album EVOLution (2016).", timeLimitSeconds: 5 },
   { questionText: "What year did Sabrina Carpenter release her debut studio album 'Eyes Wide Open'?", options: ["2014", "2015", "2016"], correctAnswerIndex: 1, explanation: "Eyes Wide Open was released on April 14, 2015.", timeLimitSeconds: 5 },
@@ -103,4 +104,398 @@ export const SABRINA_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategor
   { questionText: "Which lyric from 'Read your Mind' references a famous film?", options: ["Eternal Sunshine of the Spotless Mind", "Inception", "The Matrix"], correctAnswerIndex: 0, explanation: "She sings 'Eternal Sunshine of the Spotless Mind, I wanna read your mind.'", timeLimitSeconds: 5 },
   { questionText: "What is the name of the 2017 tour where Sabrina opened for The Vamps?", options: ["Night & Day Tour", "Wake Up Tour", "Middle of the Night Tour"], correctAnswerIndex: 0, explanation: "She opened for The Vamps on their Night & Day Tour in 2017.", timeLimitSeconds: 5 },
   { questionText: "Which social media platform did Sabrina use to tease 'Nonsense' lyrics before release?", options: ["TikTok", "Instagram Reels", "Twitter"], correctAnswerIndex: 0, explanation: "She teased lyrics on TikTok with voiceovers before release.", timeLimitSeconds: 5 },
+
+  // --- New Unique Questions (58) ---
+  {
+    questionText: "The music video for 'Nonsense' features cameos from which of Sabrina's friends?",
+    options: ["Madison Hu", "Olivia Rodrigo", "Jenna Ortega"],
+    correctAnswerIndex: 0,
+    explanation: "Actress Madison Hu appears briefly in the video.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the 2017 song where Sabrina sings 'I've been watching you for days now'?",
+    options: ["Why", "Can't Blame a Girl for Trying", "The Middle of Starting Over"],
+    correctAnswerIndex: 0,
+    explanation: "Why includes the lyric 'I've been watching you for days now.'",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How many older sisters does Sabrina have?",
+    options: ["Two", "Three", "One"],
+    correctAnswerIndex: 1,
+    explanation: "She has three older sisters: Sarah, Shannon, and a half-sister named Kayla.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the character Sabrina voiced in 'The Simpsons'?",
+    options: ["Quinn", "Lisa's friend", "Sherri"],
+    correctAnswerIndex: 0,
+    explanation: "She voiced a character named Quinn in a 2021 episode.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How many Billboard Music Awards has Sabrina Carpenter won as of 2025?",
+    options: ["Zero", "One", "Two"],
+    correctAnswerIndex: 0,
+    explanation: "She has not won a Billboard Music Award as of 2025, though nominated.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What chart record does 'Nonsense' hold on Pop Airplay?",
+    options: ["First top 5 for Sabrina", "Longest charting song by a Disney alum", "Most weeks in top 10"],
+    correctAnswerIndex: 0,
+    explanation: "Nonsense reached top 5 on Pop Airplay in 2023.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How many iHeartRadio Music Awards has Sabrina won?",
+    options: ["0", "1", "2"],
+    correctAnswerIndex: 0,
+    explanation: "She has been nominated but not yet won an iHeartRadio award as of 2025.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which singer appears on the 'Fast Times' remix?",
+    options: ["No remix exists", "Machine Gun Kelly", "Yungblud"],
+    correctAnswerIndex: 0,
+    explanation: "Fast Times has no official remix with another artist.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How many legs did the Emails I Can't Send Tour have?",
+    options: ["Two", "Three", "Four"],
+    correctAnswerIndex: 1,
+    explanation: "The tour had three legs: North America, Europe, and Asia.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the first song Sabrina performed at her 2023 Coachella set?",
+    options: ["Fast Times", "Nonsense", "Feather"],
+    correctAnswerIndex: 0,
+    explanation: "She opened her Coachella set with Fast Times.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How many shows did the Short n' Sweet Tour include as of 2025?",
+    options: ["25", "35", "45"],
+    correctAnswerIndex: 1,
+    explanation: "The initial leg had 35 shows across North America and Europe.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's makeup collaboration?",
+    options: ["Sabrina x About-Face", "Carpenter Cosmetics", "None — she has no makeup line"],
+    correctAnswerIndex: 2,
+    explanation: "She has not launched a makeup brand as of 2025.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What charity did Sabrina perform for in 2023?",
+    options: ["Planned Parenthood", "Save the Children", "Feeding America"],
+    correctAnswerIndex: 1,
+    explanation: "She performed at a Save the Children benefit gala in 2023.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which animal welfare organization has Sabrina promoted?",
+    options: ["Best Friends Animal Society", "ASPCA", "PETA"],
+    correctAnswerIndex: 0,
+    explanation: "She has shared adoption posts for Best Friends.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's clothing collection with a major retailer?",
+    options: ["SAB by Sabrina", "Carpenter Collective", "None — she has no clothing line"],
+    correctAnswerIndex: 2,
+    explanation: "She has not released a clothing collection as of 2025.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How much did Sabrina donate to the Time's Up Legal Defense Fund in 2018?",
+    options: ["$10,000", "$25,000", "$50,000"],
+    correctAnswerIndex: 0,
+    explanation: "She donated $10,000 after attending the Women's March.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the 2018 film where Sabrina played a character named Harper?",
+    options: ["The Hate U Give", "The Short History of the Long Road", "Work It"],
+    correctAnswerIndex: 1,
+    explanation: "She played Harper in the indie film The Short History of the Long Road.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which red carpet did Sabrina wear a crystal mesh dress that went viral?",
+    options: ["2024 Grammys", "2023 VMAs", "2022 AMAs"],
+    correctAnswerIndex: 2,
+    explanation: "Her 2022 AMAs red carpet look went viral on social media.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which coffee chain did Sabrina name-drop in 'Nonsense'?",
+    options: ["Starbucks", "Dunkin'", "Peet's"],
+    correctAnswerIndex: 1,
+    explanation: "She sings 'Dunkin' run, gotta get my fix' in one outro.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which actress played Sabrina's mom on 'Girl Meets World'?",
+    options: ["Danielle Fishel", "Rowan Blanchard", "Bella Thorne"],
+    correctAnswerIndex: 0,
+    explanation: "Danielle Fishel played Topanga, Maya's foster mother figure.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which sport did Sabrina play in high school?",
+    options: ["Soccer", "Basketball", "Cheerleading"],
+    correctAnswerIndex: 0,
+    explanation: "She played soccer as a child and teenager.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the magazine where Sabrina got her first cover?",
+    options: ["Teen Vogue", "Seventeen", "Girl's Life"],
+    correctAnswerIndex: 2,
+    explanation: "She was on the cover of Girl's Life in 2015.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song from 'EVOLution' was used in a commercial for a phone brand?",
+    options: ["Thumbs", "Run and Hide", "Mirage"],
+    correctAnswerIndex: 0,
+    explanation: "Thumbs appeared in a Samsung Galaxy commercial.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's grandmother (who she mentions in interviews)?",
+    options: ["Nonna", "Grandma Carole", "Grandma Ann"],
+    correctAnswerIndex: 0,
+    explanation: "She calls her grandmother Nonna.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which YouTube personality did Sabrina collaborate with on a cover song?",
+    options: ["Kurt Hugo Schneider", "Andrew Huang", "Tiffany Alvord"],
+    correctAnswerIndex: 0,
+    explanation: "She sang a cover of 'Say Something' with Kurt Hugo Schneider.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the 2024 documentary about Sabrina's tour?",
+    options: ["Short n' Sweet: Behind the Scenes", "Emails I Can't Send: The Film", "None — no documentary yet"],
+    correctAnswerIndex: 2,
+    explanation: "As of 2025, she has not released a concert documentary.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the first song Sabrina ever performed on TV?",
+    options: ["Can't Blame a Girl for Trying", "Eyes Wide Open", "We'll Be the Stars"],
+    correctAnswerIndex: 0,
+    explanation: "She performed Can't Blame a Girl for Trying on The Today Show in 2014.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which actress is Sabrina's best friend outside of Disney?",
+    options: ["Madison Hu", "Olivia Rodrigo", "Jenna Ortega"],
+    correctAnswerIndex: 0,
+    explanation: "She is close friends with actress Madison Hu since 2020.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the 2021 single where Sabrina sings 'Don't need a boy to make me feel like a woman'?",
+    options: ["Skinny Dipping", "Fast Times", "You Need to Calm Down (cover)"],
+    correctAnswerIndex: 0,
+    explanation: "Skinny Dipping includes that line in the second verse.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which American Idol alum did Sabrina date in 2019?",
+    options: ["No confirmed relationship", "Laine Hardy", "Maddie Poppe"],
+    correctAnswerIndex: 0,
+    explanation: "She has not publicly dated any American Idol contestant.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song from 'Emails I Can't Send' was released as a promotional single?",
+    options: ["Skinny Dipping", "Fast Times", "Because I Liked a Boy"],
+    correctAnswerIndex: 2,
+    explanation: "Because I Liked a Boy was a promo single before the album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the character Sabrina played in 'The Hate U Give'?",
+    options: ["Hailey", "Maya", "No role — she wasn't in that film"],
+    correctAnswerIndex: 2,
+    explanation: "Sabrina Carpenter did not appear in The Hate U Give.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is Sabrina's cat?",
+    options: ["Jasper", "Luna", "No cat — she has a dog"],
+    correctAnswerIndex: 2,
+    explanation: "She only has a dog named Goodwin, no known cat.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which of these cities is NOT a stop on the Short n' Sweet Tour?",
+    options: ["Sydney", "London", "Tokyo"],
+    correctAnswerIndex: 2,
+    explanation: "The tour included Sydney and London but not Tokyo as of 2025.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's 2025 single with a brand partnership?",
+    options: ["Sprite commercial track", "None yet", "Taste"],
+    correctAnswerIndex: 0,
+    explanation: "She released a jingle-like track for Sprite in early 2025.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which 2020 song includes a feature from Sabrina Carpenter?",
+    options: ["I Still Say Yes", "Stay", "Lonely"],
+    correctAnswerIndex: 0,
+    explanation: "I Still Say Yes is a collaboration with Kyler Fisher.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's 2015 holiday single?",
+    options: ["Christmas the Whole Year Round", "Santa Tell Me", "Holiday"],
+    correctAnswerIndex: 0,
+    explanation: "Christmas the Whole Year Round was released in 2015.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song from 'Emails I Can't Send' is about online criticism?",
+    options: ["Bet U Wanna", "Already Over", "How Many Things"],
+    correctAnswerIndex: 0,
+    explanation: "Bet U Wanna addresses haters and social media negativity.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's 2022 live lounge cover for BBC Radio 1?",
+    options: ["Hopelessly Devoted to You", "I Will Always Love You", "Valerie"],
+    correctAnswerIndex: 0,
+    explanation: "She covered Olivia Newton-John's 'Hopelessly Devoted to You.'",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which track on 'Singular: Act II' has a music video set in a diner?",
+    options: ["Pushing 20", "In My Bed", "Take Off"],
+    correctAnswerIndex: 0,
+    explanation: "Pushing 20's video is a retro diner-themed visual.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What year did Sabrina win the Shorty Award for Best in Music?",
+    options: ["2016", "2017", "2018"],
+    correctAnswerIndex: 1,
+    explanation: "She won the Shorty Award for Best in Music in 2017.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song from 'EVOLution' features the line 'You know I need you like a heartbeat'?",
+    options: ["Run and Hide", "Mirage", "Don't Want It Back"],
+    correctAnswerIndex: 1,
+    explanation: "Mirage includes that romantic lyric.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the unreleased song Sabrina performed on the 2019 tour?",
+    options: ["I Can't Stop Me", "Already Falling", "Take Off"],
+    correctAnswerIndex: 1,
+    explanation: "Already Falling was a fan-favorite unreleased track played live.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which actress played Sabrina's mother in 'Work It'?",
+    options: ["Michelle Buteau", "Jennifer Lopez", "Kerry Washington"],
+    correctAnswerIndex: 0,
+    explanation: "Michelle Buteau played the mother of Sabrina's character.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of the song Sabrina wrote after her first breakup?",
+    options: ["Shadows", "Diamond", "White Flag"],
+    correctAnswerIndex: 0,
+    explanation: "Shadows from EVOLution is about a real relationship ending.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which 2024 awards show did Sabrina host?",
+    options: ["MTV Europe Music Awards", "iHeartRadio Music Awards", "None — she hasn't hosted"],
+    correctAnswerIndex: 2,
+    explanation: "As of 2025, Sabrina has not hosted a major awards show.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's collaboration with Lost Kings?",
+    options: ["First Love", "Don't Call Me", "Look at Us Now"],
+    correctAnswerIndex: 0,
+    explanation: "First Love was released with Lost Kings in 2018.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which lyric from 'Sue Me' references a legal term?",
+    options: ["Sue me for all that I've got", "Objection", "Case closed"],
+    correctAnswerIndex: 0,
+    explanation: "The chorus repeats 'Sue me for all that I've got.'",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What year did Sabrina perform at the Wango Tango festival?",
+    options: ["2015", "2016", "2017"],
+    correctAnswerIndex: 1,
+    explanation: "She performed at Wango Tango in June 2016.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song from 'Eyes Wide Open' has a music video filmed in a forest?",
+    options: ["We'll Be the Stars", "The Middle of Starting Over", "Eyes Wide Open"],
+    correctAnswerIndex: 0,
+    explanation: "We'll Be the Stars video features forest and outdoor scenes.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Sabrina's 2019 single with a music video filmed in Tokyo?",
+    options: ["Tokyo", "In My Bed", "Exhale"],
+    correctAnswerIndex: 1,
+    explanation: "In My Bed's video was shot entirely in Tokyo, Japan.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which producer worked on most of 'Singular: Act I'?",
+    options: ["Oak Felder", "Max Martin", "Pharrell Williams"],
+    correctAnswerIndex: 0,
+    explanation: "Oak Felder produced the majority of Singular: Act I.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is Sabrina's favorite movie (she mentioned in an interview)?",
+    options: ["10 Things I Hate About You", "Clueless", "Mean Girls"],
+    correctAnswerIndex: 0,
+    explanation: "She has said 10 Things I Hate About You is her favorite.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song from 'fruitcake' features a spoken word intro?",
+    options: ["Buy Me Presents", "Cindy Lou Who", "Is It New Years Yet?"],
+    correctAnswerIndex: 1,
+    explanation: "Cindy Lou Who opens with a spoken monologue.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "How many total tracks are on 'Singular: Act I' and 'Act II' combined?",
+    options: ["20", "22", "24"],
+    correctAnswerIndex: 1,
+    explanation: "Act I has 8 tracks, Act II has 14, totaling 22 songs.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What year did Sabrina sign with Island Records?",
+    options: ["2020", "2021", "2022"],
+    correctAnswerIndex: 0,
+    explanation: "She signed with Island Records in 2020 after leaving Hollywood Records.",
+    timeLimitSeconds: 5
+  }
 ];
