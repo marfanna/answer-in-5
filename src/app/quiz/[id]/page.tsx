@@ -17,10 +17,18 @@ export default async function QuizPage({ params }: { params: Promise<{ id: strin
   let title = "Quiz";
 
   if (subCategory) {
-    filteredQuestions = QUESTIONS.filter(q => q.subCategoryId === subCategory.id);
+    if (subCategory.slug === 'mixed') {
+      filteredQuestions = QUESTIONS;
+    } else {
+      filteredQuestions = QUESTIONS.filter(q => q.subCategoryId === subCategory.id);
+    }
     title = subCategory.name;
   } else if (category) {
-    filteredQuestions = QUESTIONS.filter(q => q.categoryId === category.id);
+    if (category.slug === 'mixed') {
+      filteredQuestions = QUESTIONS;
+    } else {
+      filteredQuestions = QUESTIONS.filter(q => q.categoryId === category.id);
+    }
     title = category.name;
   } else {
     // If not found, 404

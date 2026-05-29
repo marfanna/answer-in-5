@@ -33,13 +33,20 @@ const buildNiches = () => {
     counts.set(id, (counts.get(id) || 0) + 1);
   });
 
-  return SUB_CATEGORIES.map(sc => ({
-    id:    sc.id,
-    slug:  sc.slug,
-    title: sc.name,
-    icon:  sc.icon,
-    count: counts.get(sc.id) || 0,
-  }));
+  return SUB_CATEGORIES.map(sc => {
+    let count = counts.get(sc.id) || 0;
+    if (sc.id === 'cat_mixed') {
+      count = QUESTIONS.length;
+    }
+
+    return {
+      id:    sc.id,
+      slug:  sc.slug,
+      title: sc.name,
+      icon:  sc.icon,
+      count: count,
+    };
+  });
 };
 
 export default function NichesDirectory() {

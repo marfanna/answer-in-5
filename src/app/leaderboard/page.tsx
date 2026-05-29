@@ -6,6 +6,7 @@ import { db } from '@/lib/firebase';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Trophy, Award, Filter } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { SUB_CATEGORIES } from '@/lib/mockData';
 
 type ScoreEntry = {
   id: string;
@@ -98,8 +99,16 @@ export default function LeaderboardPage() {
   }, [scores, selectedNiche]);
 
   const uniqueNiches = useMemo(() => {
-    const niches = new Set(scores.map(s => s.nicheId));
-    return ['All Niches', ...Array.from(niches)];
+    // Instead of only showing niches that have scores, we show all available niches from the database.
+    const allNicheNames = SUB_CATEGORIES.map(sc => sc.name);
+    
+    // Also include any legacy or dynamic niches that might exist in the database but aren't in SUB_CATEGORIES
+    const existingScoreNiches = new Set(scores.map(s => s.nicheId));
+    existingScoreNiches.forEach(niche => {
+      if (!allNicheNames.includes(niche)) allNicheNames.push(niche);
+    });
+
+    return ['All Niches', ...allNicheNames];
   }, [scores]);
 
   const getRankIcon = (index: number) => {

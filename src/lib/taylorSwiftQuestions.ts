@@ -1,10 +1,7 @@
 import { Question } from './mockData';
 
-export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
+export const TAYLOR_SWIFT_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'>[] = [
   {
-    "id": "q_ts_bulk_0",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Taylor Swift' first released?",
     "options": [
       "2004",
@@ -16,9 +13,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_1",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Fearless' first released?",
     "options": [
       "2008",
@@ -30,9 +24,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_2",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Speak Now' first released?",
     "options": [
       "2008",
@@ -44,9 +35,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_3",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Red' first released?",
     "options": [
       "2012",
@@ -58,9 +46,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_4",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was '1989' first released?",
     "options": [
       "2014",
@@ -72,9 +57,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_5",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Reputation' first released?",
     "options": [
       "2015",
@@ -86,9 +68,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_6",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Lover' first released?",
     "options": [
       "2020",
@@ -100,9 +79,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_7",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Folklore' first released?",
     "options": [
       "2020",
@@ -114,9 +90,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_8",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Evermore' first released?",
     "options": [
       "2021",
@@ -128,9 +101,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_9",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'Midnights' first released?",
     "options": [
       "2020",
@@ -142,9 +112,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_10",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "In what year was 'The Tortured Poets Department' first released?",
     "options": [
       "2025",
@@ -156,9 +123,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_11",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Taylor Swift' in Taylor Swift's discography?",
     "options": [
       "1",
@@ -170,9 +134,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_12",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Fearless' in Taylor Swift's discography?",
     "options": [
       "3",
@@ -184,9 +145,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_13",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Speak Now' in Taylor Swift's discography?",
     "options": [
       "4",
@@ -198,9 +156,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_14",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Red' in Taylor Swift's discography?",
     "options": [
       "4",
@@ -212,9 +167,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_15",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is '1989' in Taylor Swift's discography?",
     "options": [
       "4",
@@ -226,9 +178,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_16",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Reputation' in Taylor Swift's discography?",
     "options": [
       "7",
@@ -240,9 +189,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_17",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Lover' in Taylor Swift's discography?",
     "options": [
       "6",
@@ -254,9 +200,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_18",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Folklore' in Taylor Swift's discography?",
     "options": [
       "9",
@@ -268,9 +211,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_19",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Evermore' in Taylor Swift's discography?",
     "options": [
       "9",
@@ -282,9 +222,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_20",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'Midnights' in Taylor Swift's discography?",
     "options": [
       "11",
@@ -296,9 +233,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_21",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number studio album is 'The Tortured Poets Department' in Taylor Swift's discography?",
     "options": [
       "11",
@@ -310,9 +244,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_22",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Love Story'?",
     "options": [
       "Taylor Swift",
@@ -324,9 +255,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_23",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'You Belong With Me'?",
     "options": [
       "Folklore",
@@ -338,9 +266,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_24",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Mine'?",
     "options": [
       "Speak Now",
@@ -352,9 +277,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_25",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Enchanted'?",
     "options": [
       "Midnights",
@@ -366,9 +288,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_26",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'All Too Well'?",
     "options": [
       "Folklore",
@@ -380,9 +299,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_27",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured '22'?",
     "options": [
       "Red",
@@ -394,9 +310,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_28",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Style'?",
     "options": [
       "Lover",
@@ -408,9 +321,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_29",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Blank Space'?",
     "options": [
       "Lover",
@@ -422,9 +332,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_30",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Shake It Off'?",
     "options": [
       "Reputation",
@@ -436,9 +343,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_31",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Delicate'?",
     "options": [
       "Folklore",
@@ -450,9 +354,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_32",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Look What You Made Me Do'?",
     "options": [
       "Reputation",
@@ -464,9 +365,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_33",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Cruel Summer'?",
     "options": [
       "Speak Now",
@@ -478,9 +376,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_34",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Lover'?",
     "options": [
       "Lover",
@@ -492,9 +387,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_35",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Cardigan'?",
     "options": [
       "Folklore",
@@ -506,9 +398,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_36",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'August'?",
     "options": [
       "Lover",
@@ -520,9 +409,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_37",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Willow'?",
     "options": [
       "1989",
@@ -534,9 +420,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_38",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Champagne Problems'?",
     "options": [
       "Taylor Swift",
@@ -548,9 +431,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_39",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Anti-Hero'?",
     "options": [
       "Midnights",
@@ -562,9 +442,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_40",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Karma'?",
     "options": [
       "Reputation",
@@ -576,9 +453,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_41",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Fortnight'?",
     "options": [
       "Evermore",
@@ -590,9 +464,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_42",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Down Bad'?",
     "options": [
       "The Tortured Poets Department",
@@ -604,9 +475,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_43",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Tim McGraw'?",
     "options": [
       "1989",
@@ -618,9 +486,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_44",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Our Song'?",
     "options": [
       "The Tortured Poets Department",
@@ -632,9 +497,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_45",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Lavender Haze'?",
     "options": [
       "Evermore",
@@ -646,9 +508,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_46",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Maroon'?",
     "options": [
       "Speak Now",
@@ -660,9 +519,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_47",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Betty'?",
     "options": [
       "Folklore",
@@ -674,9 +530,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_48",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Exile'?",
     "options": [
       "Evermore",
@@ -688,9 +541,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_49",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Snow On The Beach'?",
     "options": [
       "Folklore",
@@ -702,9 +552,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_50",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Bad Blood'?",
     "options": [
       "The Tortured Poets Department",
@@ -716,9 +563,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_51",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Wildest Dreams'?",
     "options": [
       "Speak Now",
@@ -730,9 +574,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_52",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Mean'?",
     "options": [
       "Taylor Swift",
@@ -744,9 +585,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_53",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Teardrops On My Guitar'?",
     "options": [
       "The Tortured Poets Department",
@@ -758,9 +596,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_54",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Begin Again'?",
     "options": [
       "Evermore",
@@ -772,9 +607,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_55",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Ready For It?'?",
     "options": [
       "Reputation",
@@ -786,9 +618,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_56",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'The Archer'?",
     "options": [
       "Lover",
@@ -800,9 +629,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_57",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'Invisible String'?",
     "options": [
       "Fearless",
@@ -814,9 +640,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_58",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album originally featured 'No Body, No Crime'?",
     "options": [
       "Evermore",
@@ -828,9 +651,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_59",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What is Taylor Swift's birth year?",
     "options": [
       "1989",
@@ -842,9 +662,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_60",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which state was Taylor Swift born in?",
     "options": [
       "Pennsylvania",
@@ -856,9 +673,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_61",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which city is tied to her country music rise?",
     "options": [
       "Nashville",
@@ -870,9 +684,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_62",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What number is Taylor Swift famously attached to?",
     "options": [
       "13",
@@ -884,9 +695,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_63",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What do fans call themselves?",
     "options": [
       "Swifties",
@@ -898,9 +706,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_64",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which instrument is she most associated with?",
     "options": [
       "Guitar",
@@ -912,9 +717,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_65",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which cat belongs to Taylor Swift?",
     "options": [
       "Meredith Grey",
@@ -926,9 +728,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_66",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which other cat belongs to Taylor Swift?",
     "options": [
       "Olivia Benson",
@@ -940,9 +739,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_67",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which third cat joined later?",
     "options": [
       "Benjamin Button",
@@ -954,9 +750,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_68",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which tour broke massive revenue records?",
     "options": [
       "The Eras Tour",
@@ -968,9 +761,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_69",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Who collaborated on 'Exile'?",
     "options": [
       "Bon Iver",
@@ -982,9 +772,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_70",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Who appears on 'Fortnight'?",
     "options": [
       "Post Malone",
@@ -996,9 +783,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_71",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album is linked with snake imagery?",
     "options": [
       "Reputation",
@@ -1010,9 +794,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_72",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which era uses pastel visuals heavily?",
     "options": [
       "Lover",
@@ -1024,9 +805,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_73",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album surprise-dropped in July 2020?",
     "options": [
       "Folklore",
@@ -1038,9 +816,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_74",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "What genre defined Taylor's earliest years?",
     "options": [
       "Country",
@@ -1052,9 +827,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_75",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which rerecording came first?",
     "options": [
       "Fearless (Taylor's Version)",
@@ -1066,9 +838,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_76",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album introduced the phrase Taylor's Version?",
     "options": [
       "Fearless (Taylor's Version)",
@@ -1080,9 +849,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_77",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album includes 'Anti-Hero'?",
     "options": [
       "Midnights",
@@ -1094,9 +860,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_78",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which album includes 'Cardigan'?",
     "options": [
       "Folklore",
@@ -1108,9 +871,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_79",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Taylor Swift' era?",
     "options": [
       "crowns",
@@ -1122,9 +882,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_80",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Fearless' era?",
     "options": [
       "gold",
@@ -1136,9 +893,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_81",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Speak Now' era?",
     "options": [
       "rockets",
@@ -1150,9 +904,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_82",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Red' era?",
     "options": [
       "red scarf",
@@ -1164,9 +915,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_83",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the '1989' era?",
     "options": [
       "crowns",
@@ -1178,9 +926,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_84",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Reputation' era?",
     "options": [
       "snakes",
@@ -1192,9 +937,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_85",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Lover' era?",
     "options": [
       "pastels",
@@ -1206,9 +948,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_86",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Folklore' era?",
     "options": [
       "crowns",
@@ -1220,9 +959,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_87",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Evermore' era?",
     "options": [
       "rockets",
@@ -1234,9 +970,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_88",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'Midnights' era?",
     "options": [
       "rockets",
@@ -1248,9 +981,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_89",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Which motif best matches the 'The Tortured Poets Department' era?",
     "options": [
       "crowns",
@@ -1262,9 +992,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_90",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Champagne Problems'.",
     "options": [
       "Lover",
@@ -1276,9 +1003,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_91",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Anti-Hero' — which album era is that from?",
     "options": [
       "Folklore",
@@ -1290,9 +1014,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_92",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Karma' belongs to which Taylor Swift project?",
     "options": [
       "Folklore",
@@ -1304,9 +1025,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_93",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Fortnight' with its original album.",
     "options": [
       "Speak Now",
@@ -1318,9 +1036,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_94",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Down Bad'.",
     "options": [
       "Folklore",
@@ -1332,9 +1047,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_95",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Tim McGraw'.",
     "options": [
       "Midnights",
@@ -1346,9 +1058,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_96",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Our Song' — which album era is that from?",
     "options": [
       "Taylor Swift",
@@ -1360,9 +1069,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_97",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Lavender Haze' belongs to which Taylor Swift project?",
     "options": [
       "Reputation",
@@ -1374,9 +1080,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_98",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Maroon' with its original album.",
     "options": [
       "Red",
@@ -1388,9 +1091,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_99",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Betty'.",
     "options": [
       "Folklore",
@@ -1402,9 +1102,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_100",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Exile'.",
     "options": [
       "Folklore",
@@ -1416,9 +1113,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_101",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Snow On The Beach' — which album era is that from?",
     "options": [
       "Speak Now",
@@ -1430,9 +1124,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_102",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Bad Blood' belongs to which Taylor Swift project?",
     "options": [
       "Fearless",
@@ -1444,9 +1135,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_103",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Wildest Dreams' with its original album.",
     "options": [
       "The Tortured Poets Department",
@@ -1458,9 +1146,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_104",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Mean'.",
     "options": [
       "Red",
@@ -1472,9 +1157,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_105",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Teardrops On My Guitar'.",
     "options": [
       "Midnights",
@@ -1486,9 +1168,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_106",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Begin Again' — which album era is that from?",
     "options": [
       "Red",
@@ -1500,9 +1179,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_107",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Ready For It?' belongs to which Taylor Swift project?",
     "options": [
       "Fearless",
@@ -1514,9 +1190,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_108",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'The Archer' with its original album.",
     "options": [
       "Lover",
@@ -1528,9 +1201,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_109",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Invisible String'.",
     "options": [
       "The Tortured Poets Department",
@@ -1542,9 +1212,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_110",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'No Body, No Crime'.",
     "options": [
       "Evermore",
@@ -1556,9 +1223,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_111",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Love Story' — which album era is that from?",
     "options": [
       "Red",
@@ -1570,9 +1234,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_112",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'You Belong With Me' belongs to which Taylor Swift project?",
     "options": [
       "Reputation",
@@ -1584,9 +1245,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_113",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Mine' with its original album.",
     "options": [
       "Red",
@@ -1598,9 +1256,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_114",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Enchanted'.",
     "options": [
       "Speak Now",
@@ -1612,9 +1267,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_115",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'All Too Well'.",
     "options": [
       "Red",
@@ -1626,9 +1278,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_116",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears '22' — which album era is that from?",
     "options": [
       "Midnights",
@@ -1640,9 +1289,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_117",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Style' belongs to which Taylor Swift project?",
     "options": [
       "Red",
@@ -1654,9 +1300,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_118",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Blank Space' with its original album.",
     "options": [
       "1989",
@@ -1668,9 +1311,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_119",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Shake It Off'.",
     "options": [
       "1989",
@@ -1682,9 +1322,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_120",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Delicate'.",
     "options": [
       "Reputation",
@@ -1696,9 +1333,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_121",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Look What You Made Me Do' — which album era is that from?",
     "options": [
       "Lover",
@@ -1710,9 +1344,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_122",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Cruel Summer' belongs to which Taylor Swift project?",
     "options": [
       "Speak Now",
@@ -1724,9 +1355,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_123",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Lover' with its original album.",
     "options": [
       "The Tortured Poets Department",
@@ -1738,9 +1366,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_124",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Cardigan'.",
     "options": [
       "Speak Now",
@@ -1752,9 +1377,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_125",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'August'.",
     "options": [
       "Folklore",
@@ -1766,9 +1388,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_126",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Willow' — which album era is that from?",
     "options": [
       "1989",
@@ -1780,9 +1399,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_127",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Champagne Problems' belongs to which Taylor Swift project?",
     "options": [
       "Folklore",
@@ -1794,9 +1410,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_128",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Anti-Hero' with its original album.",
     "options": [
       "Fearless",
@@ -1808,9 +1421,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_129",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Karma'.",
     "options": [
       "The Tortured Poets Department",
@@ -1822,9 +1432,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_130",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Fortnight'.",
     "options": [
       "Speak Now",
@@ -1836,9 +1443,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_131",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Down Bad' — which album era is that from?",
     "options": [
       "The Tortured Poets Department",
@@ -1850,9 +1454,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_132",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Tim McGraw' belongs to which Taylor Swift project?",
     "options": [
       "Evermore",
@@ -1864,9 +1465,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_133",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Our Song' with its original album.",
     "options": [
       "The Tortured Poets Department",
@@ -1878,9 +1476,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_134",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Lavender Haze'.",
     "options": [
       "1989",
@@ -1892,9 +1487,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_135",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Maroon'.",
     "options": [
       "Folklore",
@@ -1906,9 +1498,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_136",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Betty' — which album era is that from?",
     "options": [
       "Folklore",
@@ -1920,9 +1509,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_137",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Exile' belongs to which Taylor Swift project?",
     "options": [
       "Reputation",
@@ -1934,9 +1520,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_138",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Snow On The Beach' with its original album.",
     "options": [
       "Evermore",
@@ -1948,9 +1531,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_139",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Bad Blood'.",
     "options": [
       "Lover",
@@ -1962,9 +1542,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_140",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Wildest Dreams'.",
     "options": [
       "Reputation",
@@ -1976,9 +1553,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_141",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Mean' — which album era is that from?",
     "options": [
       "Reputation",
@@ -1990,9 +1564,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_142",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Teardrops On My Guitar' belongs to which Taylor Swift project?",
     "options": [
       "Red",
@@ -2004,9 +1575,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_143",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Begin Again' with its original album.",
     "options": [
       "Red",
@@ -2018,9 +1586,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_144",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Ready For It?'.",
     "options": [
       "Reputation",
@@ -2032,9 +1597,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_145",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'The Archer'.",
     "options": [
       "The Tortured Poets Department",
@@ -2046,9 +1608,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_146",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Invisible String' — which album era is that from?",
     "options": [
       "Red",
@@ -2060,9 +1619,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_147",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'No Body, No Crime' belongs to which Taylor Swift project?",
     "options": [
       "Folklore",
@@ -2074,9 +1630,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_148",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Love Story' with its original album.",
     "options": [
       "Reputation",
@@ -2088,9 +1641,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_149",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'You Belong With Me'.",
     "options": [
       "Taylor Swift",
@@ -2102,9 +1652,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_150",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Mine'.",
     "options": [
       "Fearless",
@@ -2116,9 +1663,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_151",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Enchanted' — which album era is that from?",
     "options": [
       "Taylor Swift",
@@ -2130,9 +1674,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_152",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'All Too Well' belongs to which Taylor Swift project?",
     "options": [
       "1989",
@@ -2144,9 +1685,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_153",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match '22' with its original album.",
     "options": [
       "Red",
@@ -2158,9 +1696,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_154",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Style'.",
     "options": [
       "The Tortured Poets Department",
@@ -2172,9 +1707,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_155",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Blank Space'.",
     "options": [
       "Midnights",
@@ -2186,9 +1718,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_156",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Shake It Off' — which album era is that from?",
     "options": [
       "Evermore",
@@ -2200,9 +1729,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_157",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Delicate' belongs to which Taylor Swift project?",
     "options": [
       "Evermore",
@@ -2214,9 +1740,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_158",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Look What You Made Me Do' with its original album.",
     "options": [
       "Evermore",
@@ -2228,9 +1751,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_159",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Cruel Summer'.",
     "options": [
       "Red",
@@ -2242,9 +1762,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_160",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Lover'.",
     "options": [
       "Lover",
@@ -2256,9 +1773,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_161",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Cardigan' — which album era is that from?",
     "options": [
       "Red",
@@ -2270,9 +1784,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_162",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'August' belongs to which Taylor Swift project?",
     "options": [
       "Midnights",
@@ -2284,9 +1795,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_163",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Willow' with its original album.",
     "options": [
       "Folklore",
@@ -2298,9 +1806,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_164",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Champagne Problems'.",
     "options": [
       "Evermore",
@@ -2312,9 +1817,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_165",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Anti-Hero'.",
     "options": [
       "Reputation",
@@ -2326,9 +1828,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_166",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Karma' — which album era is that from?",
     "options": [
       "Fearless",
@@ -2340,9 +1839,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_167",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Fortnight' belongs to which Taylor Swift project?",
     "options": [
       "Evermore",
@@ -2354,9 +1850,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_168",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Down Bad' with its original album.",
     "options": [
       "Fearless",
@@ -2368,9 +1861,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_169",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Tim McGraw'.",
     "options": [
       "Midnights",
@@ -2382,9 +1872,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_170",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Our Song'.",
     "options": [
       "Folklore",
@@ -2396,9 +1883,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_171",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Lavender Haze' — which album era is that from?",
     "options": [
       "Taylor Swift",
@@ -2410,9 +1894,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_172",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Maroon' belongs to which Taylor Swift project?",
     "options": [
       "Midnights",
@@ -2424,9 +1905,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_173",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Betty' with its original album.",
     "options": [
       "The Tortured Poets Department",
@@ -2438,9 +1916,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_174",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Exile'.",
     "options": [
       "Folklore",
@@ -2452,9 +1927,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_175",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Snow On The Beach'.",
     "options": [
       "Speak Now",
@@ -2466,9 +1938,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_176",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Bad Blood' — which album era is that from?",
     "options": [
       "1989",
@@ -2480,9 +1949,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_177",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Wildest Dreams' belongs to which Taylor Swift project?",
     "options": [
       "1989",
@@ -2494,9 +1960,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_178",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Mean' with its original album.",
     "options": [
       "Folklore",
@@ -2508,9 +1971,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_179",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Teardrops On My Guitar'.",
     "options": [
       "Speak Now",
@@ -2522,9 +1982,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_180",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Begin Again'.",
     "options": [
       "The Tortured Poets Department",
@@ -2536,9 +1993,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_181",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Ready For It?' — which album era is that from?",
     "options": [
       "Reputation",
@@ -2550,9 +2004,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_182",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'The Archer' belongs to which Taylor Swift project?",
     "options": [
       "The Tortured Poets Department",
@@ -2564,9 +2015,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_183",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Invisible String' with its original album.",
     "options": [
       "Speak Now",
@@ -2578,9 +2026,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_184",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'No Body, No Crime'.",
     "options": [
       "Evermore",
@@ -2592,9 +2037,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_185",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Love Story'.",
     "options": [
       "Folklore",
@@ -2606,9 +2048,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_186",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'You Belong With Me' — which album era is that from?",
     "options": [
       "Folklore",
@@ -2620,9 +2059,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_187",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Mine' belongs to which Taylor Swift project?",
     "options": [
       "Speak Now",
@@ -2634,9 +2070,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_188",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Enchanted' with its original album.",
     "options": [
       "1989",
@@ -2648,9 +2081,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_189",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'All Too Well'.",
     "options": [
       "Speak Now",
@@ -2662,9 +2092,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_190",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song '22'.",
     "options": [
       "Red",
@@ -2676,9 +2103,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_191",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Style' — which album era is that from?",
     "options": [
       "Red",
@@ -2690,9 +2114,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_192",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Blank Space' belongs to which Taylor Swift project?",
     "options": [
       "1989",
@@ -2704,9 +2125,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_193",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Shake It Off' with its original album.",
     "options": [
       "Reputation",
@@ -2718,9 +2136,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_194",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'Delicate'.",
     "options": [
       "Speak Now",
@@ -2732,9 +2147,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_195",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Name the album connected to the song 'Look What You Made Me Do'.",
     "options": [
       "Evermore",
@@ -2746,9 +2158,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_196",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "A Swiftie hears 'Cruel Summer' — which album era is that from?",
     "options": [
       "Lover",
@@ -2760,9 +2169,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_197",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "'Lover' belongs to which Taylor Swift project?",
     "options": [
       "Lover",
@@ -2774,9 +2180,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_198",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Match 'Cardigan' with its original album.",
     "options": [
       "The Tortured Poets Department",
@@ -2788,9 +2191,6 @@ export const TAYLOR_SWIFT_QUESTIONS: Question[] = [
     "timeLimitSeconds": 5
   },
   {
-    "id": "q_ts_bulk_199",
-    "categoryId": "cat_pop_culture",
-    "subCategoryId": "subcat_tswift",
     "questionText": "Identify the album home of 'August'.",
     "options": [
       "Evermore",
