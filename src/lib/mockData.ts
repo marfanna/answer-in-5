@@ -59,13 +59,17 @@ export const SUB_CATEGORIES: SubCategory[] = [
   { id: 'subcat_tswift',  categoryId: 'cat_music', name: 'Taylor Swift',  slug: 'taylor-swift', icon: 'music', description: 'Are you the ultimate Swiftie?'     },
   { id: 'subcat_bts',     categoryId: 'cat_music', name: 'BTS',           slug: 'bts',           icon: 'music', description: 'Test your ARMY knowledge.'         },
   { id: 'subcat_beyonce', categoryId: 'cat_music', name: 'Beyoncé',       slug: 'beyonce',       icon: 'music', description: 'How well do you know Queen Bey?'   },
-  { id: 'subcat_ariana',  categoryId: 'cat_music', name: 'Ariana Grande', slug: 'ariana-grande', icon: 'music', description: 'Thank u, next — if you fail this.' },
+  { id: 'subcat_ariana',  categoryId: 'cat_music', name: 'Ariana Grande',    slug: 'ariana-grande',    icon: 'music', description: 'Thank u, next — if you fail this.'           },
+  { id: 'subcat_onedirection', categoryId: 'cat_music', name: 'One Direction', slug: 'one-direction', icon: 'music', description: 'Test your knowledge on the ultimate boyband.' },
+  { id: 'subcat_sabrina', categoryId: 'cat_music', name: 'Sabrina Carpenter', slug: 'sabrina-carpenter', icon: 'music', description: 'Short n\' sweet — but this quiz isn\'t.'      },
 ];
 
 import { BTS_QUESTIONS }          from './btsQuestions';
 import { TAYLOR_SWIFT_QUESTIONS } from './taylorSwiftQuestions';
 import { BEYONCE_QUESTIONS }      from './beyonceQuestions';
 import { ARIANA_QUESTIONS }       from './arianaQuestions';
+import { ONE_DIRECTION_QUESTIONS } from './oneDirectionQuestions';
+import { SABRINA_QUESTIONS }       from './sabrinacarpenter';
 
 const mappedTsQuestions: Question[] = TAYLOR_SWIFT_QUESTIONS.map((q, index) => ({
   ...q, id: `q_ts_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_tswift'
@@ -83,9 +87,19 @@ const mappedArianaQuestions: Question[] = ARIANA_QUESTIONS.map((q, index) => ({
   ...q, id: `q_ari_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_ariana'
 }));
 
+const mappedOneDirectionQuestions: Question[] = ONE_DIRECTION_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_1d_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_onedirection'
+}));
+
+const mappedSabrinaQuestions: Question[] = SABRINA_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_sab_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_sabrina'
+}));
+
 export const QUESTIONS: Question[] = [
   ...mappedTsQuestions,
   ...mappedBtsQuestions,
   ...mappedBeyonceQuestions,
   ...mappedArianaQuestions,
+  ...mappedOneDirectionQuestions,
+  ...mappedSabrinaQuestions,
 ];
