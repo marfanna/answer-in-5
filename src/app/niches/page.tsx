@@ -9,9 +9,10 @@ import { Search, Music, Film, Gamepad2, Book, Star } from 'lucide-react';
 import { QUESTIONS } from '@/lib/mockData';
 
 const NICHE_TITLES: Record<string, string> = {
-  subcat_tswift:  'Taylor Swift',
-  subcat_bts:     'BTS',
-  cat_pop_culture:'Pop Culture Mix',
+  subcat_tswift:   'Taylor Swift',
+  subcat_bts:      'BTS',
+  subcat_beyonce:  'Beyoncé',
+  cat_pop_culture: 'Pop Culture Mix',
 };
 
 const extractNiches = () => {
