@@ -13,9 +13,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Niche Quiz App",
+  title: "Answer in 5",
   description: "Test your knowledge in various niches",
 };
+
+import Header from "@/components/Header";
 
 export default function RootLayout({
   children,
@@ -27,7 +29,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${outfit.variable} antialiased`}
     >
-      <body className="min-h-screen bg-background text-foreground flex flex-col">{children}</body>
+      <body className="min-h-screen bg-background text-foreground flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
