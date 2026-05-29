@@ -39,14 +39,14 @@ export default function Home() {
         <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-sans">
           Choose your niche. Answer 5-second rapid-fire questions. Earn badges and climb the global leaderboards.
         </p>
-        <div className="flex items-center justify-center gap-4 pt-4">
-          <Link href="/niches">
-            <Button size="lg" className="rounded-full px-8 text-base h-12 shadow-md bg-slate-900 text-white hover:bg-slate-800 font-sans">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4 w-full max-w-sm mx-auto sm:max-w-none">
+          <Link href="/niches" className="w-full sm:w-auto">
+            <Button size="lg" className="w-full sm:w-auto rounded-full px-8 text-base h-12 shadow-md bg-slate-900 text-white hover:bg-slate-800 font-sans">
               Start a Quiz
             </Button>
           </Link>
-          <Link href="/leaderboard">
-            <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-12 border-slate-200 text-slate-700 hover:bg-slate-50 shadow-sm font-sans">
+          <Link href="/leaderboard" className="w-full sm:w-auto">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 text-base h-12 border-slate-200 text-slate-700 hover:bg-slate-50 shadow-sm font-sans">
               View Leaderboard
             </Button>
           </Link>
