@@ -35,23 +35,7 @@ export default function LeaderboardPage() {
           fetchedScores.push({ id: doc.id, ...doc.data() } as ScoreEntry);
         });
 
-        if (fetchedScores.length === 0) {
-          const mockData: ScoreEntry[] = [
-            { id: '1',  userId: 'u1', userName: 'Sarah Jenkins', userPhoto: '', nicheId: 'Pop Culture Mix', score: 1450, correctCount: 10, timestamp: null },
-            { id: '2',  userId: 'u2', userName: 'Alex Chen',     userPhoto: '', nicheId: 'BTS',             score: 1420, correctCount: 10, timestamp: null },
-            { id: '3',  userId: 'u3', userName: 'Maria Garcia',  userPhoto: '', nicheId: 'Taylor Swift',    score: 1380, correctCount: 9,  timestamp: null },
-            { id: '4',  userId: 'u1', userName: 'Sarah Jenkins', userPhoto: '', nicheId: 'Taylor Swift',    score: 1250, correctCount: 9,  timestamp: null },
-            { id: '10', userId: 'u1', userName: 'Sarah Jenkins', userPhoto: '', nicheId: 'Drake',           score: 1200, correctCount: 8,  timestamp: null },
-            { id: '11', userId: 'u1', userName: 'Sarah Jenkins', userPhoto: '', nicheId: 'Lady Gaga',       score: 1100, correctCount: 8,  timestamp: null },
-            { id: '12', userId: 'u1', userName: 'Sarah Jenkins', userPhoto: '', nicheId: 'Dua Lipa',        score: 1300, correctCount: 9,  timestamp: null },
-            { id: '13', userId: 'u1', userName: 'Sarah Jenkins', userPhoto: '', nicheId: 'Akon',            score: 1400, correctCount: 10, timestamp: null },
-            { id: '5',  userId: 'u4', userName: 'David Kim',     userPhoto: '', nicheId: 'Pop Culture Mix', score: 1100, correctCount: 8,  timestamp: null },
-            { id: '6',  userId: 'u2', userName: 'Alex Chen',     userPhoto: '', nicheId: 'BTS',             score: 1400, correctCount: 10, timestamp: null },
-          ];
-          setScores(mockData);
-        } else {
-          setScores(fetchedScores);
-        }
+        setScores(fetchedScores);
       } catch (error) {
         console.error("Error fetching leaderboard:", error);
       } finally {
