@@ -88,7 +88,7 @@ export default function Header() {
               </div>
             ) : (
               <Button onClick={handleLogin} className="bg-slate-900 text-white hover:bg-slate-800 rounded-full shadow-sm">
-                Sign in with Google
+                Sign in
               </Button>
             )
           )}
@@ -147,7 +147,7 @@ export default function Header() {
                 onClick={handleLogin}
                 className="w-full text-left px-3 py-2.5 rounded-xl text-sm font-bold text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors"
               >
-                Sign in with Google
+                Sign in
               </button>
             )
           )}
