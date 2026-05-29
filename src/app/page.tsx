@@ -64,7 +64,7 @@ export default function Home() {
           <h2 className="text-xl font-heading font-bold text-slate-900">
             Trending Niches
           </h2>
-          <Link href="/niches" className="text-sm font-medium text-slate-400 hover:text-slate-900 transition-colors">
+          <Link href="/niches" className="hidden sm:block text-sm font-medium text-slate-400 hover:text-slate-900 transition-colors">
             View all &rarr;
           </Link>
         </div>
@@ -103,6 +103,12 @@ export default function Home() {
               </Card>
             );
           })}
+        </div>
+
+        <div className="sm:hidden text-center pt-2">
+          <Link href="/niches" className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
+            View all niches &rarr;
+          </Link>
         </div>
       </section>
 
