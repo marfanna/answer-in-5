@@ -1,6 +1,7 @@
 import { Question } from './mockData';
 
 export const BTS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'>[] = [
+  // --- Existing 103 Questions ---
   { questionText: 'Which BTS album includes the track "Paradise"?', options: ['Love Yourself: Tear', 'Map of the Soul: Persona', 'BE'], correctAnswerIndex: 0, explanation: 'Paradise is a fan-favorite track from Love Yourself: Tear.', timeLimitSeconds: 5 },
   { questionText: 'Which member released the solo track "Euphoria"?', options: ['Jungkook', 'Jimin', 'V'], correctAnswerIndex: 0, explanation: 'Euphoria is Jungkook\'s solo track from Love Yourself: Answer.', timeLimitSeconds: 5 },
   { questionText: 'What city hosted BTS\'s first stadium concert?', options: ['Seoul', 'New York', 'London'], correctAnswerIndex: 0, explanation: 'They held their first stadium concert at the Seoul Olympic Stadium.', timeLimitSeconds: 5 },
@@ -100,5 +101,707 @@ export const BTS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'
   { questionText: 'Which BTS song features the lyrics "You can\'t stop me lovin\' myself"?', options: ['Idol', 'DNA', 'Fake Love'], correctAnswerIndex: 0, explanation: 'This is the main hook of the song Idol.', timeLimitSeconds: 5 },
   { questionText: 'What animal does Jungkook often compare himself to or is compared to by fans?', options: ['Bunny', 'Cat', 'Tiger'], correctAnswerIndex: 0, explanation: 'Fans affectionately call him a bunny due to his smile.', timeLimitSeconds: 5 },
   { questionText: 'Which member had a famous phrase "I purple you"?', options: ['V', 'Jimin', 'RM'], correctAnswerIndex: 0, explanation: 'V coined "Borahae" (I purple you) to mean "I will trust and love you for a long time."', timeLimitSeconds: 5 },
-  { questionText: 'Which BTS track is a diss track aimed at their haters?', options: ['Cypher Pt.3: Killer', 'Spring Day', 'Butterfly'], correctAnswerIndex: 0, explanation: 'The Cypher series, specifically Pt.3, takes heavy aim at their critics.', timeLimitSeconds: 5 }
+  { questionText: 'Which BTS track is a diss track aimed at their haters?', options: ['Cypher Pt.3: Killer', 'Spring Day', 'Butterfly'], correctAnswerIndex: 0, explanation: 'The Cypher series, specifically Pt.3, takes heavy aim at their critics.', timeLimitSeconds: 5 },
+
+  // --- 100 New, Completely Unique Questions ---
+  {
+    questionText: "What was the title of BTS's debut single album released in 2013?",
+    options: ["2 Cool 4 Skool", "O!RUL8,2?", "Skool Luv Affair"],
+    correctAnswerIndex: 0,
+    explanation: "BTS debuted with the single album 2 Cool 4 Skool in June 2013.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In what year did BTS release their first studio album, 'Dark & Wild'?",
+    options: ["2013", "2014", "2015"],
+    correctAnswerIndex: 1,
+    explanation: "Dark & Wild was released in August 2014 as their first full-length studio album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member was born in Gwacheon, Gyeonggi-do, South Korea?",
+    options: ["Jin", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Jin was born in Gwacheon on December 4, 1992.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song features the female artist Halsey?",
+    options: ["Boy With Luv", "ON", "Make It Right"],
+    correctAnswerIndex: 0,
+    explanation: "Halsey featured on the hit title track Boy With Luv from Map of the Soul: Persona.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member was born in Gwangju, South Korea?",
+    options: ["J-Hope", "Suga", "RM"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope was born in Gwangju on February 18, 1994.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In what year did BTS release their repackaged album 'Love Yourself: Answer'?",
+    options: ["2017", "2018", "2019"],
+    correctAnswerIndex: 1,
+    explanation: "Love Yourself: Answer was released in August 2018.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has the nickname 'Baby Mochi'?",
+    options: ["Jimin", "Jungkook", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin is nicknamed Mochi or Baby Mochi by fans.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with IU on the hit single 'Eight'?",
+    options: ["Suga", "RM", "J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "Suga produced and featured on IU's single Eight, released in 2020.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the hometown of both Jimin and Jungkook?",
+    options: ["Busan", "Daegu", "Ilsan"],
+    correctAnswerIndex: 0,
+    explanation: "Both Jimin and Jungkook were born and raised in Busan, South Korea.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member was born in Daegu, South Korea, alongside Suga?",
+    options: ["V", "RM", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "V (Kim Taehyung) was born in Daegu on December 30, 1995.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In what year was the repackaged album 'You Never Walk Alone' released?",
+    options: ["2015", "2017", "2018"],
+    correctAnswerIndex: 1,
+    explanation: "You Never Walk Alone, which includes Spring Day, was released in February 2017.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member is famous for having an IQ of 148?",
+    options: ["RM", "Jin", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "RM is well known for having an IQ of 148, which he demonstrated on various variety shows.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which music video is set in an abandoned train depot and features a carousel with the words 'No Vacancy'?",
+    options: ["Spring Day", "I Need U", "Run"],
+    correctAnswerIndex: 0,
+    explanation: "The Spring Day music video features prominent scenes at a snowy train station and a carousel.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'Intro: Persona'?",
+    options: ["RM", "Suga", "J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "Intro: Persona is RM's solo track opening the Map of the Soul: Persona album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS album features the track 'Pied Piper'?",
+    options: ["Love Yourself: Her", "Wings", "Map of the Soul: Persona"],
+    correctAnswerIndex: 0,
+    explanation: "Pied Piper is a track dedicated to fans from the album Love Yourself: Her.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with Lauv on the emotional track 'Who'?",
+    options: ["Jimin and Jungkook", "V and Jin", "RM and Suga"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin and Jungkook featured on Lauv's song Who from his album ~how i'm feeling~.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the name of BTS's first concert tour, held in 2014-2015?",
+    options: ["The Red Bullet Tour", "The Wings Tour", "Love Yourself World Tour"],
+    correctAnswerIndex: 0,
+    explanation: "The Red Bullet Tour was BTS's first concert tour, promoting Dark & Wild and their earlier EPs.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo mixtape 'D-2' in 2020?",
+    options: ["Suga", "RM", "J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "Suga released his second solo mixtape, D-2, under his alias Agust D in May 2020.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features the singer Sia on a digital bonus version?",
+    options: ["ON", "Idol", "Boy With Luv"],
+    correctAnswerIndex: 0,
+    explanation: "Sia features on the digital-only alternative version of ON from MOTS: 7.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which high school did Jimin and V attend together in Seoul?",
+    options: ["Korea Arts High School", "Seoul Performing Arts High School (SOPA)", "Hanlim Multi Art School"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin and V transferred to and graduated from Korea Arts High School together.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the title of the track where RM, Suga, and J-Hope mock the idol rapper stereotypes in their early years?",
+    options: ["Cypher Pt.2: Triptych", "Attack on Bangtan", "Spine Breaker"],
+    correctAnswerIndex: 0,
+    explanation: "BTS Outro/Cypher Pt.2: Triptych on Skool Luv Affair addresses critiques of idol rappers.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features the lyric 'Erase all sad memories, hold each other's hands and smile'?",
+    options: ["2! 3!", "Spring Day", "Magic Shop"],
+    correctAnswerIndex: 0,
+    explanation: "This is a key lyric from 2! 3! (Still Wishing For Better Days), their official fan song from Wings.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with Becky G on the track 'Chicken Noodle Soup'?",
+    options: ["J-Hope", "Jungkook", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope collaborated with Becky G on the multilingual remake of Chicken Noodle Soup in 2019.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In what year did BTS launch their anti-violence campaign 'Love Myself' with UNICEF?",
+    options: ["2016", "2017", "2019"],
+    correctAnswerIndex: 1,
+    explanation: "BTS and Big Hit Entertainment launched the Love Myself campaign in November 2017.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS album features the track 'Dimple' (Illegal)?",
+    options: ["Love Yourself: Her", "Wings", "BE"],
+    correctAnswerIndex: 0,
+    explanation: "Dimple is a vocal line track on the mini-album Love Yourself: Her.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member was recruited by Big Hit after he was spotted on the street for his good looks?",
+    options: ["Jin", "V", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Jin was scouted by a casting agent while stepping off a bus due to his striking appearance.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which song was released as the lead single of the album 'BE' in November 2020?",
+    options: ["Life Goes On", "Dynamite", "Blue & Grey"],
+    correctAnswerIndex: 0,
+    explanation: "Life Goes On was released as the lead single of the BE album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member is known for his signature dance name 'Smile Hoya' before debut?",
+    options: ["J-Hope", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope was active in the underground dance crew Neuron under the name Smile Hoya.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song features the lyric 'Welcome, first time to BTS?' at the beginning?",
+    options: ["Dope", "Fire", "Not Today"],
+    correctAnswerIndex: 0,
+    explanation: "RM starts the high-energy song Dope with this English phrase.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'Epiphany'?",
+    options: ["Jin", "Jimin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Epiphany is Jin's acclaimed solo track about self-love from Love Yourself: Answer.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the name of BTS's first variety show, which aired in 2013?",
+    options: ["Rookie King: Channel Bangtan", "Run BTS!", "BTS Gayo"],
+    correctAnswerIndex: 0,
+    explanation: "Rookie King: Channel Bangtan was BTS's first variety broadcast on SBS MTV.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member plays the saxophone and took lessons for several years during middle school?",
+    options: ["V", "Jungkook", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "V played the saxophone in school and has demonstrated his skills on variety shows.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features the vocal line performing a track produced by the British band Arcades?",
+    options: ["Mikrokosmos", "Jamais Vu", "Dream Glow"],
+    correctAnswerIndex: 1,
+    explanation: "Jamais Vu (sung by Jin, J-Hope, and Jungkook) was co-produced by Arcades.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS album features the track 'Louder than bombs'?",
+    options: ["Map of the Soul: 7", "BE", "Love Yourself: Tear"],
+    correctAnswerIndex: 0,
+    explanation: "Louder than bombs, co-written by Troye Sivan, is on Map of the Soul: 7.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member released the solo track 'Singularity'?",
+    options: ["V", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Singularity is V's neo-soul solo track that serves as the intro to Love Yourself: Tear.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which track is the title song of their second Japanese studio album, 'Youth'?",
+    options: ["For You", "Run (Japanese Ver.)", "I Need U (Japanese Ver.)"],
+    correctAnswerIndex: 0,
+    explanation: "For You was a Japanese original single that was later included in the album Youth.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member was the last to join the final lineup of BTS?",
+    options: ["Jimin", "V", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin had the shortest training period and was the last member added to the group.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song features the lyric 'Wonhae manhi manhi' (Want you more and more)?",
+    options: ["Blood Sweat & Tears", "DNA", "Fake Love"],
+    correctAnswerIndex: 0,
+    explanation: "This famous chorus hook is sung by J-Hope and Jungkook in Blood Sweat & Tears.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a silver ring on his pinky finger that is famously shorter than average?",
+    options: ["Jimin", "V", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin has famously small hands and a short pinky finger, a fact the members tease him about.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track won their first-ever music show trophy on SBS MTV's The Show in 2015?",
+    options: ["I Need U", "Danger", "Boy In Luv"],
+    correctAnswerIndex: 0,
+    explanation: "BTS won their very first music show trophy with I Need U on May 5, 2015.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with Charli XCX on the BTS World OST track 'Dream Glow'?",
+    options: ["Jin, Jimin, and Jungkook", "RM and Suga", "V and J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "Dream Glow features the vocals of Jin, Jimin, and Jungkook alongside Charli XCX.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with Zara Larsson on the BTS World OST track 'A Brand New Day'?",
+    options: ["V and J-Hope", "RM and Suga", "Jin and Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "A Brand New Day features V and J-Hope collaborating with Zara Larsson.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with Juice WRLD on the track 'All Night'?",
+    options: ["RM and Suga", "V and J-Hope", "Jimin and Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "All Night is a collaboration between RM, Suga, and Juice WRLD.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the name of the reality show where BTS traveled to Los Angeles to learn hip-hop history?",
+    options: ["American Hustle Life", "Bon Voyage", "In the Soop"],
+    correctAnswerIndex: 0,
+    explanation: "BTS starred in American Hustle Life on Mnet in 2014.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a younger sister named Jung Ji-woo, who is a well-known fashion influencer?",
+    options: ["J-Hope", "RM", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope's older sister is Jung Ji-woo, a fashion designer and YouTuber.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song is set in a desert and references a whale named Whalien 52?",
+    options: ["Whalien 52", "Sea", "Ma City"],
+    correctAnswerIndex: 0,
+    explanation: "Whalien 52 on HYYH Pt.4/Young Forever uses the metaphor of the 52-hertz whale to depict loneliness.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member was the first to release an official solo album, 'Jack in the Box', in 2022?",
+    options: ["J-Hope", "RM", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope released Jack in the Box in July 2022 as the first official solo album of BTS's chapter two.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Suga's pet dog?",
+    options: ["Holly", "Gureum", "Mickey"],
+    correctAnswerIndex: 0,
+    explanation: "Suga's family pet dog is a Toy Poodle named Holly (Min Holly).",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a pet dog named Mickey?",
+    options: ["J-Hope", "RM", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope's family has a Shih Tzu named Mickey.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a pet dog named Rapmon, named after his former stage name?",
+    options: ["RM", "Suga", "V"],
+    correctAnswerIndex: 0,
+    explanation: "RM owned an American Eskimo dog named Rapmon.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member raised sugar gliders named Odgeng and Eomuk?",
+    options: ["Jin", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Jin kept sugar gliders as pets and wrote the solo song Tonight about them.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'Trivia: Just Dance'?",
+    options: ["J-Hope", "RM", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "J-Hope released and performed Trivia: Just Dance on the Love Yourself album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features a sample of the Korean traditional folk genre Gugak?",
+    options: ["Idol", "Dionysus", "Black Swan"],
+    correctAnswerIndex: 0,
+    explanation: "Idol incorporates traditional Korean instruments and rhythms, including Gugak.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'First Love'?",
+    options: ["Suga", "RM", "J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "First Love is Suga's emotional piano-centered solo track from Wings.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'MAMA' as a tribute to his mother?",
+    options: ["J-Hope", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "MAMA is J-Hope's brassy solo song about his mother from the Wings album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS album features the track '21st Century Girl'?",
+    options: ["Wings", "Love Yourself: Her", "Map of the Soul: Persona"],
+    correctAnswerIndex: 0,
+    explanation: "21st Century Girl is a high-energy empowerment track featured on Wings.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'Reflection'?",
+    options: ["RM", "Suga", "J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "Reflection is RM's introspective solo track on the Wings album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'Begin'?",
+    options: ["Jungkook", "Jimin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Begin is Jungkook's solo track from Wings, dedicated to his fellow members.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features the lyric 'I wanna be a rap star, I wanna be the top'?",
+    options: ["Interlude: Shadow", "Intro: Persona", "Outro: Ego"],
+    correctAnswerIndex: 0,
+    explanation: "Suga begins the song Interlude: Shadow with this declaration of ambition.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member released the solo track 'Outro: Ego'?",
+    options: ["J-Hope", "RM", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "Outro: Ego is J-Hope's vibrant solo track closing the Map of the Soul: 7 album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In what year did BTS become global brand ambassadors for the French fashion house Louis Vuitton?",
+    options: ["2020", "2021", "2022"],
+    correctAnswerIndex: 1,
+    explanation: "Louis Vuitton appointed BTS as brand ambassadors in April 2021.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which fast-food chain collaborated with BTS in 2021 to release 'The BTS Meal' globally?",
+    options: ["McDonald's", "Burger King", "KFC"],
+    correctAnswerIndex: 0,
+    explanation: "The BTS Meal was launched by McDonald's in 50 countries in May 2021.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features the lyric 'All the underdogs in the world, a day may come when we lose'?",
+    options: ["Not Today", "Fire", "Dope"],
+    correctAnswerIndex: 0,
+    explanation: "This is the opening declaration of the high-energy song Not Today from You Never Walk Alone.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In what year did BTS make their historic debut performance on the American Music Awards with 'DNA'?",
+    options: ["2016", "2017", "2018"],
+    correctAnswerIndex: 1,
+    explanation: "BTS performed DNA at the AMAs on November 19, 2017.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the name of the stadium where BTS became the first Korean act to headline a US stadium concert in 2018?",
+    options: ["Citi Field", "MetLife Stadium", "Rose Bowl"],
+    correctAnswerIndex: 0,
+    explanation: "BTS played their first US stadium show at Citi Field in New York on October 6, 2018.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member collaborated with Psy on the energetic track 'That That' in 2022?",
+    options: ["Suga", "J-Hope", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Suga produced and featured in the music video and track That That by Psy.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member performed the official FIFA World Cup 2022 anthem 'Dreamers' in Qatar?",
+    options: ["Jungkook", "Jimin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Jungkook performed Dreamers at the World Cup opening ceremony in Qatar.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS track features the lyric 'Bow wow wow' in its explosive chorus?",
+    options: ["Fire", "Dope", "Not Today"],
+    correctAnswerIndex: 0,
+    explanation: "Fire features this signature vocal chant in its chorus drop.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member is known for his love of collecting art and visiting museums worldwide?",
+    options: ["RM", "V", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "RM is a renowned art collector and frequently documents his gallery visits on social media.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Suga's internet talk show where he interviews guests over drinks?",
+    options: ["Suchwita", "Eat Jin", "Run BTS!"],
+    correctAnswerIndex: 0,
+    explanation: "Suchwita (Time to Drink with Suga) launched on YouTube and Weverse in December 2022.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member released the critically acclaimed solo album 'Indigo' in December 2022?",
+    options: ["RM", "J-Hope", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "Indigo is RM's debut studio album, featuring collaborations with various global artists.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member released the solo album 'Face' featuring the Billboard Hot 100 #1 single 'Like Crazy' in 2023?",
+    options: ["Jimin", "Jungkook", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin released the solo album Face and topped the Hot 100 with Like Crazy in April 2023.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member released the solo album 'Layover' produced by ADOR's Min Hee-jin in September 2023?",
+    options: ["V", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "V's debut solo album Layover was creative directed by Min Hee-jin.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member released the solo album 'Golden' in November 2023?",
+    options: ["Jungkook", "Jimin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Golden is Jungkook's debut solo album, featuring the hit singles Seven and 3D.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song features the lyric 'I'm so sick of this Fake Love'?",
+    options: ["Fake Love", "Black Swan", "Blood Sweat & Tears"],
+    correctAnswerIndex: 0,
+    explanation: "This is the primary hook and title line of the lead single Fake Love.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the name of BTS's massive online concert held in June 2020 to celebrate their 7th anniversary?",
+    options: ["Bang Bang Con: The Live", "Map of the Soul ON:E", "Permission to Dance on Stage"],
+    correctAnswerIndex: 0,
+    explanation: "Bang Bang Con: The Live was their first paid online live concert during the pandemic.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member got injured and had to perform seated during their historic Wembley Stadium show in 2019?",
+    options: ["Jungkook", "Jimin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Jungkook suffered a heel injury before the London concert and had to perform while seated.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member is known for his signature saying 'Lachimolala' during a Run BTS game?",
+    options: ["Jimin", "Jin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin misheard a phrase during the whisper game and hilariously guessed Lachimolala.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a birthdate of September 12, 1994?",
+    options: ["RM", "J-Hope", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "RM (Kim Namjoon) was born on September 12, 1994.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a birthdate of March 9, 1993?",
+    options: ["Suga", "Jin", "J-Hope"],
+    correctAnswerIndex: 0,
+    explanation: "Suga (Min Yoongi) was born on March 9, 1993.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a birthdate of October 13, 1995?",
+    options: ["Jimin", "V", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Jimin (Park Jimin) was born on October 13, 1995.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a birthdate of December 30, 1995?",
+    options: ["V", "Jimin", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "V (Kim Taehyung) was born on December 30, 1995.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which member has a birthdate of September 1, 1997?",
+    options: ["Jungkook", "Jimin", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Jungkook (Jeon Jungkook) was born on September 1, 1997.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a younger brother and a younger sister, making him the eldest of three siblings?",
+    options: ["V", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "V has a younger sister named Eun-jin and a younger brother named Jong-gyu.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has only one younger brother, Min Geum-jae?",
+    options: ["Suga", "RM", "Jin"],
+    correctAnswerIndex: 0,
+    explanation: "Suga has an older brother named Min Geum-jae (formerly Jun-ki).",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has only one younger sister, Kim Kyung-min?",
+    options: ["RM", "J-Hope", "Suga"],
+    correctAnswerIndex: 0,
+    explanation: "RM has a younger sister named Kim Kyung-min.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "In the 'Not Today' music video, where did BTS film the iconic choreography on the black ice-like floor?",
+    options: ["Danyang, Chungcheongbuk-do", "Jeju Island", "Incheon Airport"],
+    correctAnswerIndex: 0,
+    explanation: "The music video for Not Today was filmed in Danyang.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS album features the track 'Am I Wrong'?",
+    options: ["Wings", "Love Yourself: Tear", "BE"],
+    correctAnswerIndex: 0,
+    explanation: "Am I Wrong is a socially conscious track featured on the Wings album.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song features the lyric 'Did you see my bag? It's full of trophies'?",
+    options: ["Mic Drop", "Idol", "Fire"],
+    correctAnswerIndex: 0,
+    explanation: "This iconic rap lyric is delivered by Suga and RM in Mic Drop.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What was the name of BTS's 2019 stadium world tour extension?",
+    options: ["Love Yourself: Speak Yourself", "The Wings Tour", "Red Bullet Tour"],
+    correctAnswerIndex: 0,
+    explanation: "The Speak Yourself tour extension added massive stadium dates globally to their Love Yourself tour.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'RJ' which is a white alpaca?",
+    options: ["Jin", "RM", "Jimin"],
+    correctAnswerIndex: 0,
+    explanation: "RJ is the fluffy, kind alpaca character created by Jin.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'Koya' who is a blue koala?",
+    options: ["RM", "Suga", "V"],
+    correctAnswerIndex: 0,
+    explanation: "Koya is the smart, sleepy blue koala character created by RM.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'Shooky' who is a cookie?",
+    options: ["Suga", "J-Hope", "Jimin"],
+    correctAnswerIndex: 0,
+    explanation: "Shooky is the mischievous chocolate cookie character created by Suga.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'Mang' who is a masked pony?",
+    options: ["J-Hope", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Mang is the mystery dancing pony character created by J-Hope.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'Chimmy' who is a puppy?",
+    options: ["Jimin", "V", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Chimmy is the passionate puppy character created by Jimin.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'Tata' who is an alien with a heart-shaped head?",
+    options: ["V", "Jimin", "Jungkook"],
+    correctAnswerIndex: 0,
+    explanation: "Tata is the curious alien character created by V.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS member has a BT21 character named 'Cooky' who is a pink rabbit?",
+    options: ["Jungkook", "V", "Jimin"],
+    correctAnswerIndex: 0,
+    explanation: "Cooky is the tough, energetic pink bunny character created by Jungkook.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BT21 character represents the fandom ARMY and protects the other characters?",
+    options: ["Van", "Koya", "RJ"],
+    correctAnswerIndex: 0,
+    explanation: "Van is the space robot character designed to protect and represent ARMY.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "Which BTS song features the lyric 'I'm the one I should love in this world'?",
+    options: ["Epiphany", "Answer: Love Myself", "Idol"],
+    correctAnswerIndex: 0,
+    explanation: "This is the core emotional realization sung by Jin in Epiphany.",
+    timeLimitSeconds: 5
+  },
+  {
+    questionText: "What is the name of Suga's solo track on the Map of the Soul: 7 album that samples his 2013 debut intro?",
+    options: ["Interlude: Shadow", "Outro: Ego", "Intro: Persona"],
+    correctAnswerIndex: 0,
+    explanation: "Interlude: Shadow samples the track Intro: O!RUL8,2? from BTS's 2013 EP.",
+    timeLimitSeconds: 5
+  }
 ];
