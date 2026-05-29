@@ -136,7 +136,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which album was released in the same year as their documentary film 'This Is Us'?",
+    questionText: "Which album was released in the same year as One Direction's documentary film 'This Is Us'?",
     options: ["Take Me Home", "Midnight Memories", "Four"],
     correctAnswerIndex: 1,
     explanation: "Both the movie 'This Is Us' and the album 'Midnight Memories' came out in 2013.",
@@ -532,7 +532,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member's date goes wrong in a restaurant when spaghetti is spilled on him in the 'Night Changes' video?",
+    questionText: "Which One Direction member's date goes wrong in a restaurant when spaghetti is spilled on the One Direction member in the 'Night Changes' video?",
     options: ["Niall Horan", "Harry Styles", "Zayn Malik"],
     correctAnswerIndex: 2,
     explanation: "In the 'Night Changes' video, Zayn's date's ex-boyfriend dumps pasta over his head.",
@@ -546,7 +546,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which music video is a retrospective compilation of behind-the-scenes footage throughout their entire career?",
+    questionText: "Which music video is a retrospective compilation of behind-the-scenes footage throughout One Direction's entire career?",
     options: ["History", "Drag Me Down", "Perfect"],
     correctAnswerIndex: 0,
     explanation: "The 'History' music video serves as a nostalgic look back at their 5-year journey.",
@@ -602,7 +602,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "In the 'Night Changes' video, which member goes ice skating on their date?",
+    questionText: "In the 'Night Changes' video, which One Direction member goes ice skating on a date?",
     options: ["Harry Styles", "Liam Payne", "Niall Horan"],
     correctAnswerIndex: 0,
     explanation: "Harry Styles takes his date ice skating and ends up falling and breaking his arm in the video.",
@@ -844,7 +844,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which single debuted at number one on the UK Singles Chart as their first-ever chart-topper?",
+    questionText: "Which single debuted at number one on the UK Singles Chart as One Direction's first-ever chart-topper?",
     options: ["What Makes You Beautiful", "Gotta Be You", "One Thing"],
     correctAnswerIndex: 0,
     explanation: "What Makes You Beautiful debuted at number one on the UK Singles Chart in September 2011.",
@@ -900,7 +900,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which song won the BRIT Award for British Video of the Year in 2017, after their hiatus started?",
+    questionText: "Which song won the BRIT Award for British Video of the Year in 2017, after One Direction's hiatus started?",
     options: ["History", "Perfect", "Drag Me Down"],
     correctAnswerIndex: 0,
     explanation: "History won the British Video of the Year award at the 2017 BRITs.",
@@ -1044,7 +1044,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which tour was their first all-stadium tour, grossing over $290 million?",
+    questionText: "Which tour was One Direction's first all-stadium tour, grossing over $290 million?",
     options: ["Take Me Home Tour", "Where We Are Tour", "On the Road Again Tour"],
     correctAnswerIndex: 1,
     explanation: "The 2014 Where We Are Tour was an all-stadium concert tour in support of Midnight Memories.",
@@ -1093,7 +1093,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "What was the name of the concert film released in theaters documenting their second concert tour?",
+    questionText: "What was the name of the concert film released in theaters documenting One Direction's second concert tour?",
     options: ["This Is Us", "Where We Are: The Concert Film", "Up All Night: The Live Tour"],
     correctAnswerIndex: 1,
     explanation: "Where We Are: The Concert Film was recorded at San Siro Stadium in Milan, Italy.",
@@ -1186,7 +1186,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member bought a minority stake in his hometown football club, Doncaster Rovers, in 2014?",
+    questionText: "Which One Direction member bought a minority stake in hometown football club Doncaster Rovers in 2014?",
     options: ["Louis Tomlinson", "Liam Payne", "Niall Horan"],
     correctAnswerIndex: 0,
     explanation: "Louis Tomlinson attempted a co-ownership takeover of the Doncaster Rovers football club.",
@@ -1293,14 +1293,14 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has a tattoo of a compass on his arm pointing 'Home'?",
+    questionText: "Which One Direction member has a tattoo of a compass on an arm pointing 'Home'?",
     options: ["Louis Tomlinson", "Zayn Malik", "Harry Styles"],
     correctAnswerIndex: 0,
     explanation: "Louis Tomlinson has a prominent compass tattoo on his right forearm.",
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has the words 'Things I Can' and 'Things I Can't' tattooed on his arms?",
+    questionText: "Which One Direction member has the words 'Things I Can' and 'Things I Can't' tattooed on both arms?",
     options: ["Harry Styles", "Zayn Malik", "Liam Payne"],
     correctAnswerIndex: 0,
     explanation: "Harry Styles has these phrases tattooed on his inner forearms.",
@@ -1363,7 +1363,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has a signature tattoo of four arrows on his right forearm?",
+    questionText: "Which One Direction member has a signature tattoo of four arrows on a right forearm?",
     options: ["Liam Payne", "Louis Tomlinson", "Harry Styles"],
     correctAnswerIndex: 0,
     explanation: "Liam Payne has four chevron arrows tattooed on his arm.",
@@ -1384,14 +1384,14 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member's grandfather, Ken West, made a guest appearance on their 1D Day broadcast?",
+    questionText: "Which One Direction member's grandfather, Ken West, made a guest appearance on One Direction's 1D Day broadcast?",
     options: ["Liam Payne", "Louis Tomlinson", "Harry Styles"],
     correctAnswerIndex: 0,
     explanation: "Liam Payne's grandfather Ken appeared on the broadcast.",
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member is known for his signature saying: 'Simple, but effective' during X Factor?",
+    questionText: "Which One Direction member is known for the signature saying: 'Simple, but effective' during X Factor?",
     options: ["Harry Styles", "Louis Tomlinson", "Zayn Malik"],
     correctAnswerIndex: 0,
     explanation: "Harry Styles described his personal style as 'Simple, but effective' during the X Factor video diaries.",
@@ -1405,7 +1405,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member had his first kiss at the age of nine?",
+    questionText: "Which One Direction member had a first kiss at the age of nine?",
     options: ["Zayn Malik", "Harry Styles", "Niall Horan"],
     correctAnswerIndex: 0,
     explanation: "Zayn Malik has shared that his first kiss was at nine years old.",
@@ -1449,7 +1449,7 @@ export const ONE_DIRECTION_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has a tattoo of the words 'Late Late' on his arm?",
+    questionText: "Which One Direction member has a tattoo of the words 'Late Late' on an arm?",
     options: ["Niall Horan", "Harry Styles", "Louis Tomlinson"],
     correctAnswerIndex: 1,
     explanation: "Harry Styles got the 'Late Late' tattoo live on James Corden's show during a game of Tattoo Roulette.",

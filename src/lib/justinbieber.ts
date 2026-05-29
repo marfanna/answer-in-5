@@ -129,7 +129,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which album was released in the same year as his documentary film 'Believe'?",
+    questionText: "Which album was released in the same year as Justin Bieber's documentary film 'Believe'?",
     options: ["Believe Acoustic", "Journals", "Purpose"],
     correctAnswerIndex: 1,
     explanation: "Both Journals and the 'Believe' documentary movie were released in 2013.",
@@ -844,7 +844,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which single debuted at number one on the US Billboard Hot 100 as his second career number one, in 2015?",
+    questionText: "Which single debuted at number one on the US Billboard Hot 100 as Justin Bieber's second career number one, in 2015?",
     options: ["Sorry", "Love Yourself", "Cold Water"],
     correctAnswerIndex: 0,
     explanation: "Sorry reached number one on the Billboard Hot 100 shortly after What Do You Mean?.",
@@ -1044,7 +1044,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which tour was his first all-stadium tour, grossing over $250 million?",
+    questionText: "Which tour was Justin Bieber's first all-stadium tour, grossing over $250 million?",
     options: ["Purpose World Tour", "Believe Tour", "Justice World Tour"],
     correctAnswerIndex: 0,
     explanation: "The Purpose World Tour was a massive stadium-level tour between 2016 and 2017.",
@@ -1093,7 +1093,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "What was the name of the concert film released in 3D documenting his path to Madison Square Garden?",
+    questionText: "What was the name of the concert film released in 3D documenting Justin Bieber's path to Madison Square Garden?",
     options: ["Never Say Never", "Believe", "Our World"],
     correctAnswerIndex: 0,
     explanation: "Justin Bieber: Never Say Never was released in theaters in February 2011.",
@@ -1121,7 +1121,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member of his team is his long-time musical director and guitarist who plays with him live?",
+    questionText: "Which member of Justin Bieber's team is the singer's long-time musical director and live guitarist?",
     options: ["Dan Kanter", "Scooter Braun", "Nick Demoura"],
     correctAnswerIndex: 0,
     explanation: "Dan Kanter served as Bieber's musical director and lead guitarist for many years.",
@@ -1293,7 +1293,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has a tattoo of a small bird on his hip, which was his first-ever tattoo?",
+    questionText: "Which Justin Bieber tattoo is a small bird on the singer's hip and was the singer's first-ever tattoo?",
     options: ["A seagull", "An eagle", "A swallow"],
     correctAnswerIndex: 0,
     explanation: "Bieber got a small seagull tattoo at age 16, representing the book Jonathan Livingston Seagull.",
@@ -1363,7 +1363,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member of his team is his long-time personal bodyguard who became a fan celebrity?",
+    questionText: "Which member of Justin Bieber's team is the singer's long-time personal bodyguard who became a fan celebrity?",
     options: ["Kenny Hamilton", "Scooter Braun", "Nick Demoura"],
     correctAnswerIndex: 0,
     explanation: "Kenny Hamilton served as his head of security and bodyguard early in his career.",
@@ -1384,7 +1384,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "What was the name of his pet hamster that he gifted to a fan at a Jingle Ball concert?",
+    questionText: "What was the name of Justin Bieber's pet hamster that the singer gifted to a fan at a Jingle Ball concert?",
     options: ["Pac", "Mally", "Hammie"],
     correctAnswerIndex: 0,
     explanation: "He owned a pet hamster named Pac that he gave to a fan in 2012.",
@@ -1412,7 +1412,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "What was the name of his first pet dog that he had as a child?",
+    questionText: "What was the name of Justin Bieber's first pet dog from the singer's childhood?",
     options: ["Sammy", "Oscar", "Goodwin"],
     correctAnswerIndex: 0,
     explanation: "His childhood papillon dog was named Sammy.",
@@ -1421,7 +1421,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
 
   // --- Category 10: Mixed General & Extra Trivia (30 questions to reach 200) ---
   {
-    questionText: "Which song was the first track on his debut studio album 'My World 2.0'?",
+    questionText: "Which song was the first track on Justin Bieber's debut studio album 'My World 2.0'?",
     options: ["Baby", "Somebody to Love", "Stuck in the Moment"],
     correctAnswerIndex: 0,
     explanation: "Baby is the opening track of the My World 2.0 album.",
@@ -1442,14 +1442,14 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which track is the title song of his 2013 compilation album Journals?",
+    questionText: "Which track is the title song of Justin Bieber's 2013 compilation album Journals?",
     options: ["No title track exists", "Heartbreaker", "All That Matters"],
     correctAnswerIndex: 0,
     explanation: "Journals does not have a specific title track; it is a compilation of singles.",
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has a tattoo of his mother's eye on his arm?",
+    questionText: "Which Justin Bieber tattoo depicts the singer's mother's eye on the singer's arm?",
     options: ["Justin Bieber", "Zayn Malik", "Harry Styles"],
     correctAnswerIndex: 0,
     explanation: "Justin Bieber has a detailed tattoo of Pattie Mallette's eye on his inner left arm.",
@@ -1505,7 +1505,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which album was his first collaborative project with bloodpop, who produced 'Friends' in 2017?",
+    questionText: "Which album was Justin Bieber's first collaborative project with bloodpop, who produced 'Friends' in 2017?",
     options: ["Purpose", "Changes", "Justice"],
     correctAnswerIndex: 0,
     explanation: "BloodPop co-produced several tracks on Purpose and later released the standalone single Friends with Bieber.",
@@ -1519,7 +1519,7 @@ export const JUSTIN_BIEBER_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subC
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which song was released as the second single from his fifth album 'Changes'?",
+    questionText: "Which song was released as the second single from Justin Bieber's fifth album 'Changes'?",
     options: ["Intentions", "Yummy", "Forever"],
     correctAnswerIndex: 0,
     explanation: "Intentions featuring Quavo was released as the second single from Changes in February 2020.",

@@ -280,7 +280,7 @@ export const BTS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member was recruited by Big Hit after he was spotted on the street for his good looks?",
+    questionText: "Which BTS member was recruited by Big Hit after being spotted on the street for good looks?",
     options: ["Jin", "V", "Jungkook"],
     correctAnswerIndex: 0,
     explanation: "Jin was scouted by a casting agent while stepping off a bus due to his striking appearance.",
@@ -350,7 +350,7 @@ export const BTS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which track is the title song of their second Japanese studio album, 'Youth'?",
+    questionText: "Which track is the title song of BTS's second Japanese studio album, 'Youth'?",
     options: ["For You", "Run (Japanese Ver.)", "I Need U (Japanese Ver.)"],
     correctAnswerIndex: 0,
     explanation: "For You was a Japanese original single that was later included in the album Youth.",
@@ -371,7 +371,7 @@ export const BTS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 'subCategoryId'
     timeLimitSeconds: 5
   },
   {
-    questionText: "Which member has a silver ring on his pinky finger that is famously shorter than average?",
+    questionText: "Which BTS member has a silver ring on a famously short pinky finger?",
     options: ["Jimin", "V", "Jungkook"],
     correctAnswerIndex: 0,
     explanation: "Jimin has famously small hands and a short pinky finger, a fact the members tease him about.",
