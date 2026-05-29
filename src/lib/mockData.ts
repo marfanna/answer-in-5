@@ -15,21 +15,44 @@ export type Category = {
   slug: string;
 };
 
+export type NicheIcon =
+  | 'music'    // music artists, bands
+  | 'film'     // movies, TV shows, actors
+  | 'gaming'   // video games, esports
+  | 'code'     // programming, tech, software
+  | 'religion' // religious knowledge, theology
+  | 'sport'    // sports, athletes
+  | 'science'  // science, space, nature
+  | 'food'     // cuisine, cooking, restaurants
+  | 'general'; // mixed / pop culture catch-all
+
 export type SubCategory = {
   id: string;
   categoryId: string;
   name: string;
   slug: string;
+  icon: NicheIcon;
 };
 
 export const CATEGORIES: Category[] = [
-  { id: 'cat_pop_culture', name: 'Pop Culture', slug: 'pop-culture' }
+  { id: 'cat_music',      name: 'Music',      slug: 'music'      },
+  { id: 'cat_film',       name: 'Film & TV',  slug: 'film-tv'    },
+  { id: 'cat_tech',       name: 'Tech',       slug: 'tech'       },
+  { id: 'cat_religion',   name: 'Religion',   slug: 'religion'   },
+  { id: 'cat_sport',      name: 'Sport',      slug: 'sport'      },
+  { id: 'cat_science',    name: 'Science',    slug: 'science'    },
+  { id: 'cat_food',       name: 'Food',       slug: 'food'       },
+  { id: 'cat_mixed',      name: 'Mixed',      slug: 'mixed'      },
 ];
 
+// ─── Register every niche here ────────────────────────────────────────────────
+// icon    → one of the NicheIcon values above
+// slug    → used in the URL: /quiz/[slug]
+// ─────────────────────────────────────────────────────────────────────────────
 export const SUB_CATEGORIES: SubCategory[] = [
-  { id: 'subcat_tswift',   categoryId: 'cat_pop_culture', name: 'Taylor Swift', slug: 'taylor-swift' },
-  { id: 'subcat_bts',      categoryId: 'cat_pop_culture', name: 'BTS',          slug: 'bts'          },
-  { id: 'subcat_beyonce',  categoryId: 'cat_pop_culture', name: 'Beyoncé',      slug: 'beyonce'      },
+  { id: 'subcat_tswift',  categoryId: 'cat_music',   name: 'Taylor Swift', slug: 'taylor-swift', icon: 'music'   },
+  { id: 'subcat_bts',     categoryId: 'cat_music',   name: 'BTS',          slug: 'bts',          icon: 'music'   },
+  { id: 'subcat_beyonce', categoryId: 'cat_music',   name: 'Beyoncé',      slug: 'beyonce',      icon: 'music'   },
 ];
 
 import { BTS_QUESTIONS }          from './btsQuestions';

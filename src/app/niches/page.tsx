@@ -5,67 +5,62 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Search, Music, Film, Gamepad2, Book, Star } from 'lucide-react';
-import { QUESTIONS } from '@/lib/mockData';
+import {
+  Search, Music, Film, Gamepad2, Code, BookOpen,
+  Trophy, FlaskConical, UtensilsCrossed, Star, type LucideIcon,
+} from 'lucide-react';
+import { QUESTIONS, SUB_CATEGORIES, type NicheIcon } from '@/lib/mockData';
 
-const NICHE_TITLES: Record<string, string> = {
-  subcat_tswift:   'Taylor Swift',
-  subcat_bts:      'BTS',
-  subcat_beyonce:  'Beyoncé',
-  cat_pop_culture: 'Pop Culture Mix',
+// ─── Icon map — one entry per NicheIcon value ─────────────────────────────────
+// To add a new icon type: add it to NicheIcon in mockData.ts, then add it here.
+const ICON_MAP: Record<NicheIcon, LucideIcon> = {
+  music:    Music,
+  film:     Film,
+  gaming:   Gamepad2,
+  code:     Code,
+  religion: BookOpen,
+  sport:    Trophy,
+  science:  FlaskConical,
+  food:     UtensilsCrossed,
+  general:  Star,
 };
 
-const extractNiches = () => {
-  const nicheMap = new Map<string, { id: string; title: string; count: number }>();
-
+// Build niche list from SUB_CATEGORIES (source of truth) + question counts
+const buildNiches = () => {
+  const counts = new Map<string, number>();
   QUESTIONS.forEach(q => {
-    const nicheId = q.subCategoryId || q.categoryId;
-    const raw = nicheId.replace(/_/g, ' ').replace(/-/g, ' ');
-    const title = NICHE_TITLES[nicheId] ??
-      raw.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-
-    if (!nicheMap.has(nicheId)) {
-      nicheMap.set(nicheId, { id: nicheId, title, count: 0 });
-    }
-    nicheMap.get(nicheId)!.count += 1;
+    const id = q.subCategoryId || q.categoryId;
+    counts.set(id, (counts.get(id) || 0) + 1);
   });
 
-  return Array.from(nicheMap.values());
-};
-
-const getIcon = (title: string) => {
-  const t = title.toLowerCase();
-  if (t.includes('music') || t.includes('swift') || t.includes('bts') || t.includes('artist')) return Music;
-  if (t.includes('movie') || t.includes('film') || t.includes('tv')) return Film;
-  if (t.includes('game') || t.includes('gaming')) return Gamepad2;
-  if (t.includes('book') || t.includes('lore')) return Book;
-  return Star;
+  return SUB_CATEGORIES.map(sc => ({
+    id:    sc.id,
+    slug:  sc.slug,
+    title: sc.name,
+    icon:  sc.icon,
+    count: counts.get(sc.id) || 0,
+  }));
 };
 
 export default function NichesDirectory() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue]   = useState('');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const allNiches = useMemo(() => extractNiches(), []);
+  const allNiches = useMemo(() => buildNiches(), []);
 
   const filteredNiches = useMemo(() => {
     if (!searchQuery.trim()) return allNiches;
     const q = searchQuery.toLowerCase();
     return allNiches.filter(n =>
-      n.title.toLowerCase().includes(q) || n.id.toLowerCase().includes(q)
+      n.title.toLowerCase().includes(q) || n.slug.toLowerCase().includes(q)
     );
   }, [allNiches, searchQuery]);
 
-  const handleSearch = () => setSearchQuery(inputValue);
-
+  const handleSearch  = () => setSearchQuery(inputValue);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') handleSearch();
   };
-
-  const handleClear = () => {
-    setInputValue('');
-    setSearchQuery('');
-  };
+  const handleClear = () => { setInputValue(''); setSearchQuery(''); };
 
   return (
     <div className="flex-1 flex flex-col bg-slate-50/50 p-4 md:p-8">
@@ -83,7 +78,6 @@ export default function NichesDirectory() {
             Find your niche and prove you're the ultimate fan.
           </p>
 
-          {/* Search bar + button */}
           <div className="max-w-2xl mx-auto pt-4 flex gap-2">
             <div className="relative flex-1">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -124,18 +118,14 @@ export default function NichesDirectory() {
             <p className="text-slate-400 text-sm max-w-sm">
               Nothing matched "{searchQuery}". Try a different term.
             </p>
-            <Button
-              variant="outline"
-              className="mt-5 rounded-xl font-bold border-slate-200"
-              onClick={handleClear}
-            >
+            <Button variant="outline" className="mt-5 rounded-xl font-bold border-slate-200" onClick={handleClear}>
               Clear Search
             </Button>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredNiches.map((niche) => {
-              const Icon = getIcon(niche.title);
+              const Icon = ICON_MAP[niche.icon];
               return (
                 <Card
                   key={niche.id}
@@ -152,7 +142,7 @@ export default function NichesDirectory() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="mt-auto pt-0">
-                    <Link href={`/quiz/${niche.id}`} className="w-full block">
+                    <Link href={`/quiz/${niche.slug}`} className="w-full block">
                       <Button
                         className="w-full rounded-xl font-bold bg-white text-slate-900 border border-slate-200 shadow-sm hover:bg-slate-900 hover:text-white transition-colors"
                         variant="outline"
