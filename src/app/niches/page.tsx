@@ -145,12 +145,6 @@ export default function NichesDirectory() {
                       <div className="p-2 bg-slate-100 rounded-xl">
                         <Icon className="w-5 h-5 text-slate-600" />
                       </div>
-                      <Badge
-                        variant="secondary"
-                        className="bg-slate-100 text-slate-500 text-xs font-mono border-none"
-                      >
-                        {niche.count} Qs
-                      </Badge>
                     </div>
                     <CardTitle className="text-xl font-heading text-slate-900 leading-tight">
                       {niche.title}
