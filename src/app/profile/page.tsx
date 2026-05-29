@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { auth, db } from '@/lib/firebase';
+import { ref, uploadString, getDownloadURL } from 'firebase/storage';
+import { auth, db, storage } from '@/lib/firebase';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { User, Activity, Target, Trophy, Clock, Star, Edit2, Check, X } from 'lucide-react';
@@ -72,15 +73,25 @@ export default function ProfilePage() {
     if (!currentUser) return;
     setIsSaving(true);
     try {
+      let finalPhotoUrl = editPhoto;
+
+      // If the photo is a base64 string, upload it to Firebase Storage first!
+      if (editPhoto.startsWith('data:image/')) {
+        const storageRef = ref(storage, `avatars/${currentUser.uid}_${Date.now()}.jpg`);
+        await uploadString(storageRef, editPhoto, 'data_url');
+        finalPhotoUrl = await getDownloadURL(storageRef);
+      }
+
       await updateProfile(currentUser, {
         displayName: editName,
-        photoURL: editPhoto
+        photoURL: finalPhotoUrl
       });
       // Force a refresh of the user state
       setCurrentUser({ ...currentUser }); 
       setIsEditing(false);
     } catch (error) {
       console.error("Error updating profile", error);
+      alert("Failed to update profile. If you see an unauthorized error, please enable Firebase Storage in your Firebase Console and set the rules to allow writes.");
     } finally {
       setIsSaving(false);
     }

@@ -26,12 +26,16 @@ export default function Home() {
           Choose your niche. Answer the 5-second rapid-fire questions. Earn badges and climb the global leaderboards.
         </p>
         <div className="flex items-center justify-center gap-4 pt-4">
-          <Button size="lg" className="rounded-full px-8 text-base h-12 shadow-md bg-slate-900 text-white hover:bg-slate-800 transition-all font-sans">
-            Start a Quiz
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-12 border-slate-200 text-slate-700 hover:bg-slate-50 shadow-sm font-sans">
-            View Leaderboards
-          </Button>
+          <Link href="/niches">
+            <Button size="lg" className="rounded-full px-8 text-base h-12 shadow-md bg-slate-900 text-white hover:bg-slate-800 transition-all font-sans">
+              Start a Quiz
+            </Button>
+          </Link>
+          <Link href="/leaderboard">
+            <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-12 border-slate-200 text-slate-700 hover:bg-slate-50 shadow-sm font-sans">
+              View Leaderboards
+            </Button>
+          </Link>
         </div>
       </section>
 
