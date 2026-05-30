@@ -22,6 +22,7 @@ const ICON_MAP: Record<NicheIcon, LucideIcon> = {
   science:  FlaskConical,
   food:     UtensilsCrossed,
   general:  Star,
+  book:     BookOpen,
 };
 
 // Build grouped sections — only categories that have subcategories

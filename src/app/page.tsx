@@ -19,6 +19,7 @@ const ICON_MAP: Record<NicheIcon, LucideIcon> = {
   science:  FlaskConical,
   food:     UtensilsCrossed,
   general:  Star,
+  book:     BookOpen,
 };
 
 // First 3 niches in SUB_CATEGORIES appear on homepage.
