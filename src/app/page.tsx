@@ -54,7 +54,7 @@ export default function Home() {
       {/* Hero */}
       <section className="text-center space-y-6 py-12 md:py-24 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
         <Badge variant="outline" className="px-4 py-1 text-sm bg-slate-50 border-slate-200 text-slate-600 rounded-full shadow-sm">
-          The ultimate test of fandom
+          The ultimate rapid-fire trivia challenge
         </Badge>
         <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-slate-900">
           Prove you belong.
