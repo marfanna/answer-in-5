@@ -50,9 +50,7 @@ export default function Header() {
   return (
     <header className="w-full border-b border-slate-100 bg-white/70 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-heading font-bold text-xl tracking-tight text-slate-900">
-          <img src="/logo.png" alt="Answer In 5 Logo" className="w-8 h-8 object-contain rounded-md" />
           <span>Answer<span className="text-slate-400">In5</span></span>
         </Link>
 
