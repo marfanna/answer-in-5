@@ -30,7 +30,7 @@ export default function TrendingNiches({ fallback }: { fallback: SubCategory[] }
         const { db } = await import('@/lib/firebase');
         const { collection, query, orderBy, limit, getDocs } = await import('firebase/firestore');
         
-        const q = query(collection(db, 'niche_stats'), orderBy('playCount', 'desc'), limit(3));
+        const q = query(collection(db, 'niche_stats'), orderBy('playCount', 'desc'), limit(50));
         const querySnapshot = await getDocs(q);
         
         const topSlugs: string[] = [];
@@ -44,10 +44,29 @@ export default function TrendingNiches({ fallback }: { fallback: SubCategory[] }
             .map(slug => SUB_CATEGORIES.find(s => s.slug === slug))
             .filter((c): c is SubCategory => c !== undefined);
 
-          // If we got valid categories, pad with fallback if under 3
-          let finalTrending = matchedCategories;
-          if (finalTrending.length < 3) {
-            const needed = 3 - finalTrending.length;
+          let finalTrending: SubCategory[] = [];
+          const usedCategories = new Set<string>();
+          
+          // First pass: try to get diverse categories (1 per category)
+          for (const niche of matchedCategories) {
+             if (finalTrending.length >= 9) break;
+             if (!usedCategories.has(niche.categoryId)) {
+               finalTrending.push(niche);
+               usedCategories.add(niche.categoryId);
+             }
+          }
+          
+          // Second pass: fill up to 9 with the remaining trending niches
+          for (const niche of matchedCategories) {
+             if (finalTrending.length >= 9) break;
+             if (!finalTrending.find(f => f.id === niche.id)) {
+               finalTrending.push(niche);
+             }
+          }
+
+          // If we still didn't reach 9, pad with fallback
+          if (finalTrending.length < 9) {
+            const needed = 9 - finalTrending.length;
             const extra = fallback.filter(f => !finalTrending.some(t => t.id === f.id)).slice(0, needed);
             finalTrending = [...finalTrending, ...extra];
           }

@@ -22,9 +22,30 @@ const ICON_MAP: Record<NicheIcon, LucideIcon> = {
   book:     BookOpen,
 };
 
-// First 3 niches in SUB_CATEGORIES appear on homepage.
-// Reorder SUB_CATEGORIES in mockData.ts to control which show here.
-const FEATURED = SUB_CATEGORIES.slice(0, 3);
+// Pick 9 diverse niches for the homepage fallback.
+const getDiverseFeatured = () => {
+  const diverse: typeof SUB_CATEGORIES = [];
+  const usedCategories = new Set<string>();
+  
+  // Try to get 1 from each category first
+  for (const niche of SUB_CATEGORIES) {
+    if (diverse.length >= 9) break;
+    if (!usedCategories.has(niche.categoryId)) {
+      diverse.push(niche);
+      usedCategories.add(niche.categoryId);
+    }
+  }
+  
+  // Fill up to 9 if we didn't have 9 categories
+  for (const niche of SUB_CATEGORIES) {
+    if (diverse.length >= 9) break;
+    if (!diverse.find(d => d.id === niche.id)) {
+      diverse.push(niche);
+    }
+  }
+  return diverse;
+};
+const FEATURED = getDiverseFeatured();
 
 export default function Home() {
   return (
