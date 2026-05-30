@@ -108,6 +108,11 @@ export default function BattleRoomPage() {
       } else if (data.status === 'completed') {
         setGameState('results');
       }
+
+      // Auto-transition to completed when both players finish
+      if (data.status !== 'completed' && data.hostFinished && data.guestFinished) {
+        updateDoc(docObj.ref, { status: 'completed' });
+      }
     }, (error) => {
       console.error("Error subscribing to battle room", error);
       setBattleError("Failed to connect to the battle room.");
@@ -200,17 +205,7 @@ export default function BattleRoomPage() {
             });
           }
 
-          // If BOTH players are now finished, update overall status to completed
-          // Re-fetch document current state to be sure
-          const docRef = doc(db, 'battles', battleDocId);
-          getDocs(query(collection(db, 'battles'), where('roomId', '==', roomId))).then((snap) => {
-            if (!snap.empty) {
-              const currentRoom = snap.docs[0].data() as BattleRoom;
-              if (currentRoom.hostFinished && currentRoom.guestFinished) {
-                updateDoc(docRef, { status: 'completed' });
-              }
-            }
-          });
+
 
           setGameState('waiting_opponent');
         } else {
@@ -433,6 +428,7 @@ export default function BattleRoomPage() {
     const oppName = isHost ? battle.guestName : battle.hostName;
     const oppPhoto = isHost ? battle.guestPhoto : battle.hostPhoto;
     const oppProgress = isHost ? battle.guestProgress : battle.hostProgress;
+    const oppFinished = isHost ? battle.guestFinished : battle.hostFinished;
 
     return (
       <div className="flex-1 max-w-md w-full mx-auto p-6 flex flex-col justify-center space-y-6">
@@ -452,7 +448,7 @@ export default function BattleRoomPage() {
             <div className="text-left">
               <h4 className="font-heading font-bold text-sm text-slate-800">{oppName}</h4>
               <p className="text-xs text-slate-400 font-sans">
-                Progress: <span className="font-bold text-slate-700">Question {oppProgress} / {battle.questions.length}</span>
+                Progress: <span className="font-bold text-slate-700">{oppFinished ? "Finished!" : `Question ${oppProgress} / ${battle.questions.length}`}</span>
               </p>
             </div>
           </div>
