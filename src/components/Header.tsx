@@ -78,6 +78,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
+          <Link href="/" className={navLinkClass('/')}>Home</Link>
           {/* Desktop Niches Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
@@ -183,6 +184,12 @@ export default function Header() {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div className="md:hidden border-t border-slate-100 bg-white px-4 py-3 space-y-1">
+          <Link
+            href="/"
+            className={`block px-3 py-2.5 rounded-xl text-sm font-bold transition-colors ${pathname === '/' ? 'bg-slate-100 text-slate-900' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}
+          >
+            Home
+          </Link>
           {/* Mobile Niches Section */}
           <div>
             <button
