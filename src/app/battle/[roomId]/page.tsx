@@ -143,12 +143,12 @@ export default function BattleRoomPage() {
     }
   }, [gameState, countdown, battle, user, battleDocId]);
 
-  // 5. Active Question Timer Logic
+  // 5. Active Question Timer Logic (ticks every 2 seconds to give 10 seconds total, but visually counts down from 5)
   useEffect(() => {
     if (gameState !== 'playing' || isAnswering) return;
 
     if (timeLeft > 0) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 2000);
       return () => clearTimeout(timer);
     } else {
       // Time expired: auto submit wrong answer
