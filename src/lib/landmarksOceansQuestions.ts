@@ -139,6 +139,7 @@ export const LANDMARKS_OCEANS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 's
     options: ['The Bedouins', 'The Nabataeans', 'The Phoenicians', 'The Sumerians'],
     correctAnswerIndex: 1,
     explanation: 'Petra was the capital of the Nabataean Kingdom, a wealthy and powerful nomadic tribe.',
+    timeLimitSeconds: 15
   },
   {
     questionText: 'I am a large white marble mausoleum in Agra, India, built by a Mughal emperor for his favorite wife. What am I?',
@@ -208,6 +209,7 @@ export const LANDMARKS_OCEANS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 's
     options: ['Kazakhstan', 'Mongolia', 'Namibia', 'Australia'],
     correctAnswerIndex: 1,
     explanation: 'Mongolia is a landlocked country in East Asia. Due to its vast size and small population, it is the most sparsely populated fully sovereign country.',
+    timeLimitSeconds: 15
   },
   {
     questionText: 'I am a colossal neoclassical sculpture on Liberty Island in New York Harbor, originally a gift from the people of France. What am I?',
