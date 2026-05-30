@@ -83,9 +83,13 @@ export default function Header() {
                     if (catNiches.length === 0) return null;
                     return (
                       <div key={cat.id} className="space-y-1.5">
-                        <h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 font-sans">
+                        <Link
+                          href={`/niches#${cat.slug}`}
+                          onClick={() => setNichesOpen(false)}
+                          className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 hover:text-indigo-600 transition-colors font-sans"
+                        >
                           {cat.name}
-                        </h4>
+                        </Link>
                         <div className="space-y-1">
                           {catNiches.map((niche) => (
                             <Link
@@ -184,9 +188,13 @@ export default function Header() {
                   if (catNiches.length === 0) return null;
                   return (
                     <div key={cat.id} className="space-y-1">
-                      <h5 className="text-[9px] font-black uppercase tracking-wider text-slate-400 font-sans">
+                      <Link
+                        href={`/niches#${cat.slug}`}
+                        onClick={() => setMobileNichesOpen(false)}
+                        className="text-[9px] font-black uppercase tracking-wider text-slate-400 hover:text-indigo-600 transition-colors font-sans block"
+                      >
                         {cat.name}
-                      </h5>
+                      </Link>
                       <div className="grid grid-cols-2 gap-x-2 gap-y-1 pl-1">
                         {catNiches.map((niche) => (
                           <Link

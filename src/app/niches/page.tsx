@@ -160,7 +160,7 @@ export default function NichesDirectory() {
             {sections.map(({ category, niches, totalCount }) => {
               const CatIcon = ICON_MAP[category.icon];
               return (
-                <section key={category.id} className="space-y-4">
+                <section key={category.id} id={category.slug} className="space-y-4 scroll-mt-24">
                   {/* Category header */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
