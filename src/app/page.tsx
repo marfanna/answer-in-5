@@ -7,6 +7,7 @@ import {
   Trophy, FlaskConical, UtensilsCrossed, Star, Zap, type LucideIcon,
 } from 'lucide-react';
 import { SUB_CATEGORIES, type NicheIcon } from '@/lib/mockData';
+import TrendingNiches from '@/components/TrendingNiches';
 
 const ICON_MAP: Record<NicheIcon, LucideIcon> = {
   music:    Music,
@@ -69,41 +70,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {FEATURED.map((niche) => {
-            const Icon = ICON_MAP[niche.icon];
-            return (
-              <Card
-                key={niche.id}
-                className="bg-white border border-slate-100 hover:border-slate-300 transition-all duration-200 hover:-translate-y-0.5 shadow-sm hover:shadow-md rounded-2xl flex flex-col group"
-              >
-                <CardHeader className="pb-3">
-                  <div className="mb-4">
-                    <div className="p-2 bg-slate-100 rounded-xl w-fit">
-                      <Icon className="w-5 h-5 text-slate-600" />
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl font-heading text-slate-900">
-                    {niche.name}
-                  </CardTitle>
-                  <CardDescription className="text-sm text-slate-400">
-                    {niche.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="mt-auto pt-0">
-                  <Link href={`/quiz/${niche.slug}`} className="w-full block">
-                    <Button
-                      className="w-full rounded-xl font-bold bg-white text-slate-900 border border-slate-200 shadow-sm hover:bg-slate-900 hover:text-white transition-colors"
-                      variant="outline"
-                    >
-                      Take the Quiz
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        <TrendingNiches fallback={FEATURED} />
 
         <div className="sm:hidden text-center pt-2">
           <Link href="/niches" className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">

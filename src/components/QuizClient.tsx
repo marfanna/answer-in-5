@@ -22,7 +22,7 @@ function shuffleArray<T>(array: T[]): T[] {
   return newArray;
 }
 
-export default function QuizClient({ questions, title }: { questions: Question[], title: string }) {
+export default function QuizClient({ questions, title, slug }: { questions: Question[], title: string, slug: string }) {
   const router = useRouter();
   
   // Game State
@@ -66,9 +66,21 @@ export default function QuizClient({ questions, title }: { questions: Question[]
     setActiveQuestions(shuffled.slice(0, 10));
   }, [questions]);
 
-  const startQuiz = () => {
+  const startQuiz = async () => {
     setQuizState('playing');
     setTimeLeft(5);
+
+    try {
+      const { db } = await import('@/lib/firebase');
+      const { doc, increment, setDoc } = await import('firebase/firestore');
+      
+      const statRef = doc(db, 'niche_stats', slug);
+      await setDoc(statRef, {
+        playCount: increment(1)
+      }, { merge: true });
+    } catch (e) {
+      console.error("Failed to update play count", e);
+    }
   };
 
   const handleNextQuestion = useCallback(async () => {

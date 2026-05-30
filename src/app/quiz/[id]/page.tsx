@@ -47,7 +47,7 @@ export default async function QuizPage({ params }: { params: Promise<{ id: strin
 
   return (
     <div className="flex-1 flex flex-col bg-slate-50/50">
-      <QuizClient questions={filteredQuestions} title={title} />
+      <QuizClient questions={filteredQuestions} title={title} slug={id} />
     </div>
   );
 }
