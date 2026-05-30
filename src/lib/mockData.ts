@@ -18,6 +18,7 @@ export type NicheIcon =
   | 'sport'    // sports, athletes
   | 'science'  // science, space, nature
   | 'food'     // cuisine, cooking, restaurants
+  | 'book'     // english, literature, grammar
   | 'general'; // mixed / catch-all
 
 export type Category = {
@@ -50,6 +51,7 @@ export const CATEGORIES: Category[] = [
   { id: 'cat_science',  name: 'Science',      slug: 'science',  icon: 'science',  description: 'Space, nature, and scientific discoveries'  },
   { id: 'cat_food',     name: 'Food',         slug: 'food',     icon: 'food',     description: 'Cuisine, recipes, and food culture'         },
   { id: 'cat_geo',      name: 'Geography',    slug: 'geography',icon: 'general',  description: 'World capitals, landmarks, and geography trivia' },
+  { id: 'cat_english',  name: 'English',      slug: 'english',  icon: 'book',     description: 'Grammar, vocabulary, and literature trivia' },
   { id: 'cat_mixed',    name: 'Ultimate Mix', slug: 'mixed',    icon: 'general',  description: 'Every niche combined. One massive challenge.' },
 ];
 
@@ -69,6 +71,11 @@ export const SUB_CATEGORIES: SubCategory[] = [
   { id: 'subcat_us_states', categoryId: 'cat_geo', name: 'US States', slug: 'us-states-capitals', icon: 'general', description: 'Test your knowledge of the 50 US States and Capitals.' },
   { id: 'subcat_world_capitals', categoryId: 'cat_geo', name: 'World Capitals', slug: 'world-capitals', icon: 'general', description: 'Every single country and its capital.' },
   { id: 'subcat_landmarks_oceans', categoryId: 'cat_geo', name: 'Landmarks & Oceans', slug: 'landmarks-oceans', icon: 'general', description: 'Hard trivia on famous world landmarks and oceans.' },
+  { id: 'subcat_fill_blank', categoryId: 'cat_english', name: 'Fill in the Gap', slug: 'fill-in-the-gap', icon: 'book', description: 'Test your grammar, syntax, and phrasing.' },
+  { id: 'subcat_spelling_bee', categoryId: 'cat_english', name: 'The Spelling Bee', slug: 'spelling-bee', icon: 'book', description: 'Can you identify the correctly spelled tricky word?' },
+  { id: 'subcat_vocabulary', categoryId: 'cat_english', name: 'Vocabulary Mastery', slug: 'vocabulary-mastery', icon: 'book', description: 'Advanced synonyms, antonyms, and definitions.' },
+  { id: 'subcat_idioms_devices', categoryId: 'cat_english', name: 'Idioms & Literature', slug: 'idioms-literature', icon: 'book', description: 'Literary devices, famous quotes, and confusing idioms.' },
+  { id: 'subcat_ielts', categoryId: 'cat_english', name: 'IELTS Quick-Fire', slug: 'ielts-practice', icon: 'book', description: 'Rapid-fire collocations, prepositions, and lexical resource.' },
 ];
 
 import { BTS_QUESTIONS }          from './btsQuestions';
@@ -83,6 +90,11 @@ import { NICKI_MINAJ_QUESTIONS }   from './nickiminajQuestions';
 import { US_STATES_QUESTIONS } from './usStatesCapitalsQuestions';
 import { WORLD_CAPITALS_QUESTIONS } from './worldCapitalsQuestions';
 import { LANDMARKS_OCEANS_QUESTIONS } from './landmarksOceansQuestions';
+import { ENGLISH_FILL_BLANK_QUESTIONS } from './englishFillBlankQuestions';
+import { ENGLISH_SPELLING_BEE_QUESTIONS } from './englishSpellingBeeQuestions';
+import { ENGLISH_VOCAB_QUESTIONS } from './englishVocabQuestions';
+import { ENGLISH_IDIOMS_DEVICES_QUESTIONS } from './englishIdiomsDevicesQuestions';
+import { ENGLISH_IELTS_QUESTIONS } from './englishIeltsQuestions';
 
 const mappedTsQuestions: Question[] = TAYLOR_SWIFT_QUESTIONS.map((q, index) => ({
   ...q, id: `q_ts_${index}`, categoryId: 'cat_music', subCategoryId: 'subcat_tswift'
@@ -132,6 +144,26 @@ const mappedLandmarksOceansQuestions: Question[] = LANDMARKS_OCEANS_QUESTIONS.ma
   ...q, id: `q_land_${index}`, categoryId: 'cat_geo', subCategoryId: 'subcat_landmarks_oceans'
 }));
 
+const mappedEnglishFillBlankQuestions: Question[] = ENGLISH_FILL_BLANK_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_eng_fill_${index}`, categoryId: 'cat_english', subCategoryId: 'subcat_fill_blank'
+}));
+
+const mappedEnglishSpellingBeeQuestions: Question[] = ENGLISH_SPELLING_BEE_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_eng_spell_${index}`, categoryId: 'cat_english', subCategoryId: 'subcat_spelling_bee'
+}));
+
+const mappedEnglishVocabQuestions: Question[] = ENGLISH_VOCAB_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_eng_vocab_${index}`, categoryId: 'cat_english', subCategoryId: 'subcat_vocabulary'
+}));
+
+const mappedEnglishIdiomsDevicesQuestions: Question[] = ENGLISH_IDIOMS_DEVICES_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_eng_idioms_${index}`, categoryId: 'cat_english', subCategoryId: 'subcat_idioms_devices'
+}));
+
+const mappedEnglishIeltsQuestions: Question[] = ENGLISH_IELTS_QUESTIONS.map((q, index) => ({
+  ...q, id: `q_eng_ielts_${index}`, categoryId: 'cat_english', subCategoryId: 'subcat_ielts'
+}));
+
 export const QUESTIONS: Question[] = [
   ...mappedTsQuestions,
   ...mappedBtsQuestions,
@@ -145,4 +177,9 @@ export const QUESTIONS: Question[] = [
   ...mappedUsStatesQuestions,
   ...mappedWorldCapitalsQuestions,
   ...mappedLandmarksOceansQuestions,
+  ...mappedEnglishFillBlankQuestions,
+  ...mappedEnglishSpellingBeeQuestions,
+  ...mappedEnglishVocabQuestions,
+  ...mappedEnglishIdiomsDevicesQuestions,
+  ...mappedEnglishIeltsQuestions,
 ];
