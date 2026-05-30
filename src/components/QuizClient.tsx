@@ -9,6 +9,9 @@ import { Badge } from '@/components/ui/badge';
 import { Trophy, Clock, AlertCircle, ArrowRight, ShieldAlert, Share2, Download, RotateCcw, ChevronDown, ChevronUp, Star, ThumbsUp, Target, Zap } from 'lucide-react';
 import { Question } from '@/lib/mockData';
 import { toPng } from 'html-to-image';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { auth } from '@/lib/firebase';
+import { onAuthStateChanged, User, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 type QuizState = 'rules' | 'playing' | 'finished';
 
@@ -40,8 +43,47 @@ export default function QuizClient({ questions, title, slug }: { questions: Ques
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isAnswering, setIsAnswering] = useState(false); 
   
+  // Auth State for Signup Prompt
+  const [user, setUser] = useState<User | null>(null);
+  const [showSignupModal, setShowSignupModal] = useState(false);
+
   // DOM Ref for Image Export
   const resultCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogin = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      setShowSignupModal(false);
+      
+      // Save score retroactively if they logged in
+      if (score > 0) {
+        const { db } = await import('@/lib/firebase');
+        const { addDoc, collection, serverTimestamp } = await import('firebase/firestore');
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          await addDoc(collection(db, 'scores'), {
+            userId: currentUser.uid,
+            userName: currentUser.displayName || 'Anonymous Player',
+            userPhoto: currentUser.photoURL || '',
+            nicheId: title,
+            score: score,
+            correctCount: correctCount,
+            timestamp: serverTimestamp()
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error signing in with Google", error);
+    }
+  };
 
   // Initialization: Randomize and filter seen questions
   useEffect(() => {
@@ -117,6 +159,11 @@ export default function QuizClient({ questions, title, slug }: { questions: Ques
       }
       
       setQuizState('finished');
+      
+      // If not logged in, prompt them to sign up to save their score
+      if (!auth.currentUser) {
+        setShowSignupModal(true);
+      }
     }
   }, [currentIndex, activeQuestions, score, correctCount, title]);
 
@@ -370,6 +417,29 @@ export default function QuizClient({ questions, title, slug }: { questions: Ques
             )}
           </div>
         )}
+
+        {/* SIGNUP MODAL */}
+        <Dialog open={showSignupModal} onOpenChange={setShowSignupModal}>
+          <DialogContent className="sm:max-w-md bg-white border-slate-200">
+            <DialogHeader className="text-center sm:text-center pt-8 pb-4">
+              <div className="mx-auto w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                <Trophy className="w-8 h-8 text-yellow-500" />
+              </div>
+              <DialogTitle className="text-2xl font-heading text-slate-900">Claim Your Score!</DialogTitle>
+              <DialogDescription className="text-slate-500 text-base pt-2">
+                You just scored <span className="font-bold text-slate-900">{score}</span> points. Sign up now to save this score, track your history, and see if you can climb the Global Leaderboard!
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-col gap-3 py-4">
+              <Button onClick={handleLogin} className="w-full h-12 text-base font-bold bg-slate-900 text-white hover:bg-slate-800 rounded-xl">
+                Sign in with Google
+              </Button>
+              <Button variant="ghost" onClick={() => setShowSignupModal(false)} className="w-full h-12 text-sm text-slate-500 hover:text-slate-900 rounded-xl">
+                Maybe later
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     );
   }
