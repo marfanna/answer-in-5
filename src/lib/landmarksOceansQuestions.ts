@@ -349,6 +349,7 @@ export const LANDMARKS_OCEANS_QUESTIONS: Omit<Question, 'id' | 'categoryId' | 's
     options: ['Osaka', 'Kyoto', 'Tokyo', 'Yokohama'],
     correctAnswerIndex: 2,
     explanation: 'The Tokyo metropolis is the most populous metropolitan area in the world, serving as the political, economic, and cultural center of Japan.',
+    timeLimitSeconds: 15
   },
   {
     questionText: 'I am the deepest known part of the world\'s oceans, located in the western Pacific Ocean. What am I?',
