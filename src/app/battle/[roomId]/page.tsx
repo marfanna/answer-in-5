@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
@@ -10,6 +10,7 @@ import { auth, db } from '@/lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { collection, query, where, getDocs, updateDoc, doc, onSnapshot } from 'firebase/firestore';
 import { Sword, Trophy, Clock, AlertCircle, ShieldAlert, RotateCcw, Share2, Copy, Check, X, ArrowRight, Star, Zap } from 'lucide-react';
+import { toPng } from 'html-to-image';
 
 interface BattleQuestion {
   questionText: string;
@@ -69,6 +70,8 @@ export default function BattleRoomPage() {
 
   // UI status states
   const [copied, setCopied] = useState(false);
+  const [shareLoading, setShareLoading] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   // 1. Monitor auth status
   useEffect(() => {
@@ -587,73 +590,128 @@ export default function BattleRoomPage() {
   }
 
   // RESULTS
+  const shareAsImage = async () => {
+    if (!cardRef.current) return;
+    setShareLoading(true);
+    try {
+      const dataUrl = await toPng(cardRef.current, {
+        cacheBust: true,
+        pixelRatio: 2,
+        backgroundColor: '#ffffff',
+      });
+
+      const blob = await (await fetch(dataUrl)).blob();
+      const file = new File([blob], 'answer-in-5-battle.png', { type: 'image/png' });
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({
+          title: 'Answer in 5 — Battle Result',
+          text: 'Check out my battle result!',
+          files: [file],
+        });
+      } else {
+        const link = document.createElement('a');
+        link.download = 'answer-in-5-battle.png';
+        link.href = dataUrl;
+        link.click();
+      }
+    } catch (err) {
+      console.error('Share failed:', err);
+    } finally {
+      setShareLoading(false);
+    }
+  };
+
   if (gameState === 'results') {
     const hostScore = battle.hostScore;
     const guestScore = battle.guestScore;
 
     let resultTitle = "";
     let resultColor = "";
-    
+    let ResultIcon = Trophy;
+    let resultIconColor = "text-amber-500";
+    let resultSubtitle = "";
+
     if (hostScore === guestScore) {
       resultTitle = "It's a Tie!";
       resultColor = "text-indigo-600";
+      ResultIcon = Star;
+      resultIconColor = "text-indigo-500";
+      resultSubtitle = "Neck and neck!";
     } else if ((isHost && hostScore > guestScore) || (isGuest && guestScore > hostScore)) {
       resultTitle = "Victory!";
       resultColor = "text-green-600";
+      ResultIcon = Trophy;
+      resultIconColor = "text-amber-500";
+      resultSubtitle = "You crushed it!";
     } else {
       resultTitle = "Defeat!";
       resultColor = "text-red-500";
+      ResultIcon = ShieldAlert;
+      resultIconColor = "text-red-500";
+      resultSubtitle = "Better luck next time!";
     }
 
     return (
       <div className="flex-1 max-w-md w-full mx-auto p-6 flex flex-col justify-center space-y-6">
-        <Card className="border border-slate-100 shadow-md rounded-2xl text-center p-6 md:p-8 space-y-6">
-          <div className="space-y-2">
-            <Trophy className="w-16 h-16 text-amber-500 mx-auto" />
-            <h1 className={`text-4xl font-heading font-black tracking-tight ${resultColor}`}>
-              {resultTitle}
-            </h1>
-            <p className="text-xs text-slate-400 font-sans">
-              Synchronized 1v1 Battle Completed
-            </p>
-          </div>
-
-          {/* Final scores layout */}
-          <div className="grid grid-cols-2 gap-4 bg-slate-50 p-4 border border-slate-100 rounded-2xl">
-            {/* Host Stats */}
-            <div className="space-y-2 border-r border-slate-200">
-              <img
-                src={battle.hostPhoto || `https://ui-avatars.com/api/?name=${battle.hostName}&background=4f46e5&color=fff&bold=true`}
-                alt={battle.hostName}
-                className="w-12 h-12 rounded-full border border-slate-200 mx-auto object-cover"
-              />
-              <h4 className="font-heading font-bold text-xs text-slate-800 truncate px-1">{battle.hostName}</h4>
-              <p className="text-xl font-black font-sans text-slate-900">{battle.hostScore} pts</p>
-              {hostScore > guestScore && <Badge className="bg-green-50 border-green-100 text-green-700 rounded-full font-bold text-[9px]">Winner</Badge>}
-            </div>
-
-            {/* Guest Stats */}
+        <div ref={cardRef}>
+          <Card className="border border-slate-100 shadow-md rounded-2xl text-center p-6 md:p-8 space-y-6">
             <div className="space-y-2">
-              <img
-                src={battle.guestPhoto || `https://ui-avatars.com/api/?name=${battle.guestName}&background=64748b&color=fff&bold=true`}
-                alt={battle.guestName || 'Guest'}
-                className="w-12 h-12 rounded-full border border-slate-200 mx-auto object-cover"
-              />
-              <h4 className="font-heading font-bold text-xs text-slate-800 truncate px-1">{battle.guestName}</h4>
-              <p className="text-xl font-black font-sans text-slate-900">{battle.guestScore} pts</p>
-              {guestScore > hostScore && <Badge className="bg-green-50 border-green-100 text-green-700 rounded-full font-bold text-[9px]">Winner</Badge>}
+              <ResultIcon className={`w-16 h-16 ${resultIconColor} mx-auto`} />
+              <h1 className={`text-4xl font-heading font-black tracking-tight ${resultColor}`}>
+                {resultTitle}
+              </h1>
+              <p className="text-xs text-slate-400 font-sans">
+                {resultSubtitle}
+              </p>
             </div>
-          </div>
 
-          <div className="space-y-3">
-            <Button onClick={() => router.push('/battle')} className="w-full rounded-xl bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 h-11 font-sans">
-              Play Again <RotateCcw className="w-4 h-4" />
-            </Button>
-            <Button onClick={() => router.push('/')} variant="outline" className="w-full rounded-xl border-slate-200 text-slate-700 hover:bg-slate-50 h-11 font-sans">
-              Go Home
-            </Button>
-          </div>
-        </Card>
+            {/* Final scores layout */}
+            <div className="grid grid-cols-2 gap-0 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden">
+              {/* Host Stats */}
+              <div className={`space-y-2 border-r border-slate-200 p-4 ${hostScore > guestScore ? 'bg-green-50' : hostScore < guestScore ? 'opacity-60' : ''}`}>
+                <img
+                  src={battle.hostPhoto || `https://ui-avatars.com/api/?name=${battle.hostName}&background=4f46e5&color=fff&bold=true`}
+                  alt={battle.hostName}
+                  className="w-12 h-12 rounded-full border border-slate-200 mx-auto object-cover"
+                />
+                <h4 className="font-heading font-bold text-xs text-slate-800 truncate px-1">{battle.hostName}</h4>
+                <p className="text-xl font-black font-sans text-slate-900">{battle.hostScore} pts</p>
+                {hostScore > guestScore && <Badge className="bg-green-50 border-green-100 text-green-700 rounded-full font-bold text-[9px]">Winner</Badge>}
+              </div>
+
+              {/* Guest Stats */}
+              <div className={`space-y-2 p-4 ${guestScore > hostScore ? 'bg-green-50' : guestScore < hostScore ? 'opacity-60' : ''}`}>
+                <img
+                  src={battle.guestPhoto || `https://ui-avatars.com/api/?name=${battle.guestName}&background=64748b&color=fff&bold=true`}
+                  alt={battle.guestName || 'Guest'}
+                  className="w-12 h-12 rounded-full border border-slate-200 mx-auto object-cover"
+                />
+                <h4 className="font-heading font-bold text-xs text-slate-800 truncate px-1">{battle.guestName}</h4>
+                <p className="text-xl font-black font-sans text-slate-900">{battle.guestScore} pts</p>
+                {guestScore > hostScore && <Badge className="bg-green-50 border-green-100 text-green-700 rounded-full font-bold text-[9px]">Winner</Badge>}
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <Button
+                onClick={shareAsImage}
+                disabled={shareLoading}
+                variant="outline"
+                className="w-full rounded-xl border-slate-200 text-slate-700 hover:bg-slate-50 h-11 font-sans flex items-center justify-center gap-2"
+              >
+                {shareLoading ? <RotateCcw className="w-4 h-4 animate-spin" /> : <Share2 className="w-4 h-4" />}
+                {shareLoading ? 'Generating...' : 'Share Result'}
+              </Button>
+              <Button onClick={() => router.push('/battle')} className="w-full rounded-xl bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 h-11 font-sans">
+                Play Again <RotateCcw className="w-4 h-4" />
+              </Button>
+              <Button onClick={() => router.push('/')} variant="outline" className="w-full rounded-xl border-slate-200 text-slate-700 hover:bg-slate-50 h-11 font-sans">
+                Go Home
+              </Button>
+            </div>
+          </Card>
+        </div>
       </div>
     );
   }
