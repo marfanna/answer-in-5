@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -16,6 +16,21 @@ export default function Header() {
   const [nichesOpen, setNichesOpen] = useState(false);
   const [mobileNichesOpen, setMobileNichesOpen] = useState(false);
   const pathname = usePathname();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setNichesOpen(false);
+      }
+    }
+    if (nichesOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [nichesOpen]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -64,7 +79,7 @@ export default function Header() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
           {/* Desktop Niches Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setNichesOpen(!nichesOpen)}
               className={`flex items-center gap-1 text-sm font-bold transition-colors outline-none ${
@@ -75,9 +90,7 @@ export default function Header() {
             </button>
 
             {nichesOpen && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setNichesOpen(false)} />
-                <div className="absolute left-0 mt-3 w-[560px] -translate-x-[25%] bg-white border border-slate-100 shadow-xl rounded-2xl p-5 grid grid-cols-3 gap-5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+              <div className="absolute left-0 mt-3 w-[560px] -translate-x-[25%] bg-white border border-slate-100 shadow-xl rounded-2xl p-5 grid grid-cols-3 gap-5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                   {CATEGORIES.filter(cat => cat.id !== 'cat_mixed').map((cat) => {
                     const catNiches = SUB_CATEGORIES.filter(sub => sub.categoryId === cat.id);
                     if (catNiches.length === 0) return null;
@@ -117,7 +130,6 @@ export default function Header() {
                     </Link>
                   </div>
                 </div>
-              </>
             )}
           </div>
 
